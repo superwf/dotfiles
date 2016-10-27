@@ -1,0 +1,21 @@
+[user]
+	name = superwf
+	email = superwf@gmail.com
+[core]
+  autocrlf = false
+  eol = lf
+	editor = vim
+	pager = less
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[alias]
+	ci = commit
+	co = checkout
+  unstage = reset HEAD
+  last = log -1 HEAD
+  ammend = commit --amend
+  merged = branch --merged
+  unmerged = branch --no-merged
+  rm-cache = rm --cache
