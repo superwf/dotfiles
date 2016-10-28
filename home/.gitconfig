@@ -19,6 +19,7 @@
   merged = branch --merged
   unmerged = branch --no-merged
   rm-cache = rm --cache
+  log-last = log -1
 
   ; only use when commit wrong file
   remove-from-history = "!f() { \
@@ -46,3 +47,9 @@
   }; f"
 
   submodule-init = "git submodule update --init --recursive;"
+
+  remove-remote-branch =  "!f() { \
+    branch=$1; \
+    test -z $branch && echo \"branch required.\" 1>&2 && exit 1; \
+    git push origin :$branch; \
+  }; f"

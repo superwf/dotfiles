@@ -95,7 +95,6 @@ Plugin 'vim-scripts/sessionman.vim'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'godlygeek/tabular' "用:或者=为基准使两边的文字对齐
-Plugin 'nathanaelkane/vim-indent-guides' " 显示缩进
 
 " for autocomplete
 Plugin 'SirVer/ultisnips'
@@ -291,11 +290,4 @@ if isdirectory($HOME . "/.vim/bundle/neocomplete.vim")
   let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
   let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
   let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-endif
-
-" for nathanaelkane/vim-indent-guides
-if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
-    let g:indent_guides_start_level = 2
-    let g:indent_guides_guide_size = 1
-    let g:indent_guides_enable_on_vim_startup = 1
 endif
