@@ -1,15 +1,13 @@
 #!/bin/bash
 
-dir="$HOME"
-cd $dir
-git clone --recursive git://github.com/paulmillr/dotfiles.git
-cd dotfiles
+# check command exist
+type curl > /dev/null 2>&1 || sudo apt-get curl -y
+type git > /dev/null 2>&1 || sudo apt-get git-core -y
+type vim > /dev/null 2>&1 || sudo apt-get vim -y
 sudo bash symlink-dotfiles.sh
 
-# only for system like debian/ubuntu
-# install curl
-sudo apt-get install vim curl git-core -y
 # install nvm then use nvm install nodejs
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+test -d ~/.nvm || curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 # install rvm then use rvm install ruby
-curl -L https://get.rvm.io | bash -s stable --autolibs=enabled [--ruby] [--rails] [--trace]
+test -d ~/.rvm || curl -L https://get.rvm.io | bash -s stable --autolibs=enabled [--ruby] [--rails] [--trace]
+# type rvm > /dev/null 2>&1 || curl -L https://get.rvm.io | bash -s stable --autolibs=enabled [--ruby] [--rails] [--trace]
