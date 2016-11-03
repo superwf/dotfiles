@@ -39,8 +39,10 @@ nnoremap Zz :q!<ENTER>
 set hlsearch
 set shiftwidth=2
 set tabstop=2
-set enc=utf-8
+set encoding=utf-8
 set fencs=utf-8,gbk,ucs-bom,gb18030,euc-jp,gb2312,cp936
+" set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
+set fillchars+=stl:\ ,stlnc:\
 set expandtab
 color elflord
 set fileformats=unix
@@ -48,9 +50,9 @@ set viminfo='200,%,!,<50,s10,h,rA,rB,/50,:50
 set noignorecase
 
 " set path+=./js,./view,./
-set suffixesadd+=.js
-set dict=./tags
-set complete+=k
+" set suffixesadd+=.js
+" set dict=./tags
+" set complete+=k
 
 set backup                  " Backups are nice ...
 set undofile                " So is persistent undo ...
@@ -79,10 +81,12 @@ Plugin 'tpope/vim-markdown'
 
 " for git
 Plugin 'tpope/vim-fugitive'
+Plugin 'mhinz/vim-signify'
 
 " for comment code
 Plugin 'tpope/vim-commentary'
 
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-abolish'
@@ -145,6 +149,10 @@ let g:syntastic_always_populate_loc_list = 1
 
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
+
+" for powerline
+set laststatus=2   " Always show the statusline
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 " copy from spf13
 " 将swap, undo, backup, cursor在当前文件的保存位置的文件移到.vim文件夹中
