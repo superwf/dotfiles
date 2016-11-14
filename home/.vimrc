@@ -8,6 +8,8 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+let mapleader = ','
+
 
 " Don't use Ex mode, use Q for formatting
 nnoremap Q gq
@@ -18,28 +20,35 @@ set mouse=a
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-	 	\ | wincmd p | diffthis
+" command! DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+" 	 	\ | wincmd p | diffthis
 
 set number
 syntax on
-noremap <F3> :up<ENTER>
+noremap <F2> :up<ENTER>
+noremap <F3> :tabprev<ENTER>
 noremap <F4> :tabnext<ENTER>
-noremap <F5> :SyntasticCheck<ENTER>
-noremap <F6> :lnext<ENTER>
-noremap <F7> :source ~/.vim/session/work.session
-noremap <F8> :mksession! ~/.vim/session/work.session
+noremap <F5> :bprev<ENTER>
+noremap <F6> :bnext<ENTER>
+noremap <F7> :source ~/.vimrc<ENTER>
+noremap <F8> :e!<ENTER> " reload current file
 
-" auto insert , to end of line
+" auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
 nnoremap <c-k> :lnext<ENTER>
 nnoremap <c-l> :lprevious<ENTER>
-nnoremap Zz :q!<ENTER>
+nnoremap Zz :q<ENTER>
+nnoremap Zw :w<ENTER>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 set hlsearch
 set shiftwidth=2
 set tabstop=2
-set encoding=utf-8
+set encoding=utf-8 nobomb
 set fencs=utf-8,gbk,ucs-bom,gb18030,euc-jp,gb2312,cp936
 " set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
 set fillchars+=stl:\ ,stlnc:\
@@ -48,11 +57,16 @@ color elflord
 set fileformats=unix
 set viminfo='200,%,!,<50,s10,h,rA,rB,/50,:50
 set noignorecase
-
-" set path+=./js,./view,./
-" set suffixesadd+=.js
-" set dict=./tags
-" set complete+=k
+set splitbelow " new window below
+set splitright " new window right
+set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.brf,.cb,.dmg,.exe,.ind,.idx,.ilg,.inx,.out,.toc,.pyc,.pyd,.dll " ignire these type of files
+set wildignore+=.DS_Store
+set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
+set wildignore+=*/bower_components/*,*/node_modules/*
+set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/build/*,*/ckeditor/*,*/doc/*,*/source_maps/*,*/dist/*
+set wildmenu " Hitting TAB in command mode will show possible completions above command line
+set wildmode=list:longest " Complete only until point of ambiguity
+set wrapscan " Searches wrap around end of file
 
 set backup                  " Backups are nice ...
 set undofile                " So is persistent undo ...
@@ -72,10 +86,10 @@ Plugin 'elzr/vim-json'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'digitaltoad/vim-pug' " for jade template file
 Plugin 'tpope/vim-rails'
 Plugin 'vim-scripts/nginx.vim'
 
-" Plugin 'briancollins/vim-jst'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
 
@@ -86,15 +100,16 @@ Plugin 'mhinz/vim-signify'
 " for comment code
 Plugin 'tpope/vim-commentary'
 
-Plugin 'Lokaltog/vim-powerline'
+
+Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gcmt/wildfire.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-indent'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'kana/vim-textobj-indent'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-abolish'
-Plugin 'digitaltoad/vim-pug'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'critiqjo/vsearch.vim'
@@ -102,7 +117,6 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/sessionman.vim'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'luochen1990/rainbow'
-Plugin 'godlygeek/tabular' "用:或者=为基准使两边的文字对齐
 
 " for autocomplete
 Plugin 'SirVer/ultisnips'
@@ -120,11 +134,6 @@ filetype plugin indent on
 if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
   set statusline+=%{fugitive#statusline()}
 endif
-
-let mapleader = ','
-
-" for tabular
-let g:tabular_loaded=1
 
 " for rainbow
 let g:rainbow_active=1
@@ -147,6 +156,8 @@ let g:syntastic_enable_javascript_checker = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
 " let g:syntastic_auto_loc_list = 0
 " let g:syntastic_check_on_open = 0
 " let g:syntastic_check_on_wq = 0
@@ -154,9 +165,21 @@ let g:syntastic_always_populate_loc_list = 1
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
 
-" for powerline
+" for airline
+let g:airline#extensions#tabline#enabled = 1
 set laststatus=2   " Always show the statusline
-set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+
+" for session
+set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
+    nmap <leader>sl :SessionList<CR>
+    nmap <leader>ss :SessionSave<CR>
+    nmap <leader>sc :SessionClose<CR>
+endif
+
+" for textobj-indent
+" nmap <leader>ti <Plug>(textobj-indent-i)
+" nmap <leader>ta <Plug>(textobj-indent-a)
 
 " copy from spf13
 " 将swap, undo, backup, cursor在当前文件的保存位置的文件移到.vim文件夹中
