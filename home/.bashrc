@@ -149,7 +149,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 #source ~/.rvm/scripts/rvm
 
 [[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # for docker
 # source .bashrc_docker
