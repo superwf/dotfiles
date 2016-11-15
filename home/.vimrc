@@ -26,10 +26,10 @@ set mouse=a
 set number
 syntax on
 noremap <F2> :up<ENTER>
-noremap <F3> :tabprev<ENTER>
-noremap <F4> :tabnext<ENTER>
-noremap <F5> :bprev<ENTER>
-noremap <F6> :bnext<ENTER>
+noremap <F3> :bprev<ENTER>
+noremap <F4> :bnext<ENTER>
+noremap <F5> :tabprev<ENTER>
+noremap <F6> :tabnext<ENTER>
 noremap <F7> :source ~/.vimrc<ENTER>
 noremap <F8> :e!<ENTER> " reload current file
 
