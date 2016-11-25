@@ -25,7 +25,7 @@ set mouse=a
 
 set number
 syntax on
-noremap <F2> :up<ENTER>
+noremap <F2> :w<ENTER>
 noremap <F3> :bprev<ENTER>
 noremap <F4> :bnext<ENTER>
 noremap <F5> :tabprev<ENTER>
@@ -102,7 +102,7 @@ Plugin 'tpope/vim-commentary'
 
 
 Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
+" Plugin 'bling/vim-bufferline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gcmt/wildfire.vim'
 " Plugin 'kana/vim-textobj-user'
@@ -168,6 +168,9 @@ let g:jsx_ext_required=0
 " for airline
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2   " Always show the statusline
+
+let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
+
 
 " for session
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
