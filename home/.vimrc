@@ -89,6 +89,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'digitaltoad/vim-pug' " for jade template file
 Plugin 'tpope/vim-rails'
 Plugin 'vim-scripts/nginx.vim'
+Plugin 'posva/vim-vue'
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
