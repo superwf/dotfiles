@@ -135,21 +135,7 @@ export GOROOT="/home/wangfan/golang"
 PATH="$PATH:$GOPATH/bin"
 export VAGRANT_DEFAULT_PROVIDER=libvirt
 
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"
-
-#export PHANTOMJS_BIN=~/.nvm/v0.12.7/bin/phantomjs
-
-# setxkbmap -option ctrl:nocaps;
-# xmodmap ~/.speedswapper
-
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#source ~/.rvm/scripts/rvm
-
-[[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
-# xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# [[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
 
 # for docker
 # source .bashrc_docker
@@ -172,10 +158,10 @@ export GIT_HOSTING='git@git.domain.com'
 unset MAILCHECK
 
 # Change this to your console based IRC client of choice.
-export IRC_CLIENT='irssi'
+# export IRC_CLIENT='irssi'
 
 # Set this to the command you use for todo.txt-cli
-export TODO="t"
+# export TODO="t"
 
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
