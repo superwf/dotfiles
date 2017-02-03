@@ -127,6 +127,8 @@ Plugin 'Shougo/neocomplete.vim'
 " for syntastic check
 Plugin 'scrooloose/syntastic'
 
+Plugin 'iamcco/markdown-preview.vim'
+
 call vundle#end()
 
 filetype plugin indent on
