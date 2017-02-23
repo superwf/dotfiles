@@ -176,8 +176,3 @@ export SCM_CHECK=true
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
-
-alias lnpm='cnpm --registry=http://registry.npm.pppcloud.cn\
-  --registryweb=http://npm.pppcloud.cn\
-  --cache=$HOME/.npm/.cache/lnpm\
-  --userconfig=$HOME/.lnpmrc'
