@@ -80,7 +80,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 
-" fro syntax
+" syntax
 Plugin 'isRuslan/vim-es6'
 Plugin 'elzr/vim-json'
 Plugin 'groenewege/vim-less'
@@ -106,8 +106,8 @@ Plugin 'bling/vim-airline'
 " Plugin 'bling/vim-bufferline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'gcmt/wildfire.vim'
-" Plugin 'kana/vim-textobj-user'
-" Plugin 'kana/vim-textobj-indent'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-indent' " vii dai yai cii
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-abolish'
 Plugin 'junegunn/vim-easy-align'
@@ -128,6 +128,9 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'iamcco/markdown-preview.vim'
+
+" show marks
+Plugin 'kshenoy/vim-signature'
 
 call vundle#end()
 
