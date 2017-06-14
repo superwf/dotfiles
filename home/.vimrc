@@ -93,6 +93,7 @@ Plugin 'posva/vim-vue'
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-markdown'
+Plugin 'leafgarland/typescript-vim'
 
 " for git
 Plugin 'tpope/vim-fugitive'
