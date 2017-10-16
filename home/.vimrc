@@ -133,6 +133,8 @@ Plugin 'iamcco/markdown-preview.vim'
 " show marks
 Plugin 'kshenoy/vim-signature'
 
+Plugin 'prettier/vim-prettier'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -339,3 +341,11 @@ endif
 
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s
+
+" for prettier
+let g:prettier#exec_cmd_async = 1
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#semi = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
