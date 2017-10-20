@@ -126,7 +126,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'Shougo/neocomplete.vim'
 
 " for syntastic check
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 
 Plugin 'iamcco/markdown-preview.vim'
 
@@ -158,15 +159,18 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " let g:UltiSnipsEditSplit="vertical"
 
 " for syntastic check
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_javascript_checker = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_enable_javascript_checker = 1
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exec = 'eslint'
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_error_symbol = '✗'
+" let g:syntastic_warning_symbol = '⚠'
+" let g:syntastic_scss_checkers = ['stylelint']
+" let g:syntastic_enable_less_checker = 1
+" let g:syntastic_less_checkers = ['css/stylelint']
 " let g:syntastic_auto_loc_list = 0
 " let g:syntastic_check_on_open = 0
 " let g:syntastic_check_on_wq = 0
@@ -349,3 +353,28 @@ let g:prettier#autoformat = 0
 let g:prettier#config#use_tabs = 'false'
 let g:prettier#config#semi = 'false'
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
+
+" for ale syntax checker
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'scss': ['stylelint'],
+\}
+let g:ale_fix_on_save = 1
+let g:airline#extensions#ale#enabled = 1
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+
+set statusline=%{LinterStatus()}
