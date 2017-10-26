@@ -361,6 +361,8 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'scss': ['stylelint'],
+\   'css': ['stylelint'],
+\   'less': ['stylelint'],
 \}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
