@@ -357,12 +357,14 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " for ale syntax checker
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'html': ['tidy'],
 \}
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
 \   'less': ['stylelint'],
+\   'html': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
