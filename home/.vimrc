@@ -53,7 +53,7 @@ set fencs=utf-8,gbk,ucs-bom,gb18030,euc-jp,gb2312,cp936
 " set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
 set fillchars+=stl:\ ,stlnc:\
 set expandtab
-color elflord
+color ron
 set fileformats=unix
 set viminfo='200,%,!,<50,s10,h,rA,rB,/50,:50
 set noignorecase
@@ -357,14 +357,12 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " for ale syntax checker
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'html': ['tidy'],
 \}
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
 \   'less': ['stylelint'],
-\   'html': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
