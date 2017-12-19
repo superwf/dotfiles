@@ -347,19 +347,20 @@ endif
 autocmd FileType vue setlocal commentstring=//\ %s
 
 " for prettier
-let g:prettier#exec_cmd_async = 1
-let g:prettier#quickfix_enabled = 0
-let g:prettier#autoformat = 0
-let g:prettier#config#use_tabs = 'false'
-let g:prettier#config#semi = 'false'
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
+" let g:prettier#exec_cmd_async = 1
+" let g:prettier#quickfix_enabled = 0
+" let g:prettier#autoformat = 0
+" let g:prettier#config#use_tabs = 'false'
+" let g:prettier#config#semi = 'false'
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
 
 " for ale syntax checker
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'json': ['prettier'],
+\   'javascript': ['prettier', 'eslint'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
 \   'less': ['stylelint'],
@@ -370,6 +371,7 @@ let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
+let g:ale_javascript_prettier_use_local_config = 1
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
 
