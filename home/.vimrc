@@ -150,7 +150,11 @@ let g:rainbow_active=1
 
 " for autocomplete
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsUsePythonVersion = 3
+if has('python')
+  let g:UltiSnipsUsePythonVersion = 2
+elseif has('python3')
+  let g:UltiSnipsUsePythonVersion = 3
+endif
 let g:UltiSnipsEnableSnipMate = 0
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
