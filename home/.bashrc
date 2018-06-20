@@ -116,6 +116,7 @@ fi
 # add android env to PATH
 ANDROID_HOME="/home/wangfan/Android/Sdk"
 PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
+PATH="$PATH:$HOME/android-studio/bin"
 
 if [ -f ~/.keychain/$HOSTNAME-sh ]; then
   . ~/.keychain/$HOSTNAME-sh
@@ -178,3 +179,7 @@ export SCM_CHECK=true
 source $BASH_IT/bash_it.sh
 
 export EDITOR=/usr/bin/vi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export FZF_DEFAULT_COMMAND='fd --type f'
