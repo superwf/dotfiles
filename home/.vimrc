@@ -127,6 +127,13 @@ Plugin 'tpope/vim-obsession'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " Plugin 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
 
 " for syntastic check
 " Plugin 'scrooloose/syntastic'
@@ -161,6 +168,8 @@ endif
 let g:UltiSnipsEnableSnipMate = 0
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+let g:deoplete#enable_at_startup = 1
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
@@ -383,7 +392,7 @@ let g:ale_sign_warning = '⚠'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_lint_on_enter = 0
 " let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_delay = 1000
+let g:ale_fix_delay = 1000
 
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
