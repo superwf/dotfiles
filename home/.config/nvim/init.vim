@@ -77,7 +77,7 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 filetype off
 " set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/bundle')
-Plug 'VundleVim/Vundle.vim'
+" Plug 'VundleVim/Vundle.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " syntax
@@ -137,7 +137,7 @@ Plug 'iamcco/markdown-preview.vim'
 " show marks
 Plug 'kshenoy/vim-signature'
 
-Plug 'prettier/vim-prettier'
+" Plug 'prettier/vim-prettier'
 
 call plug#end()
 
@@ -367,11 +367,12 @@ autocmd FileType vue setlocal commentstring=//\ %s
 let g:ale_linters = {
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
+\   'typescript': ['tslint', 'tsserver'],
 \}
 let g:ale_fixers = {
 \   'json': ['prettier'],
 \   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'tslint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['stylelint'],
 \   'less': ['prettier', 'stylelint'],
