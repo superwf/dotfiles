@@ -75,78 +75,61 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 
 " set the runtime path to include Vundle and initialize
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'editorconfig/editorconfig-vim'
+call plug#begin('~/.vim/bundle')
+Plug 'editorconfig/editorconfig-vim'
 
 " syntax
-Plugin 'isRuslan/vim-es6'
-Plugin 'elzr/vim-json'
-Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'digitaltoad/vim-pug' " for jade template file
-Plugin 'tpope/vim-rails'
-Plugin 'vim-scripts/nginx.vim'
-Plugin 'posva/vim-vue'
+Plug 'isRuslan/vim-es6'
+Plug 'elzr/vim-json'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'digitaltoad/vim-pug' " for jade template file
+Plug 'vim-scripts/nginx.vim'
+Plug 'posva/vim-vue'
 
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-markdown'
-Plugin 'leafgarland/typescript-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-markdown'
+Plug 'leafgarland/typescript-vim'
 
 " for git
-Plugin 'tpope/vim-fugitive'
-Plugin 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
 
 " for comment code
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 
-Plugin 'bling/vim-airline'
-" Plugin 'bling/vim-bufferline'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'gcmt/wildfire.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-indent' " vii dai yai cii
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-projectionist'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'critiqjo/vsearch.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/sessionman.vim'
-Plugin 'vim-scripts/restore_view.vim'
-Plugin 'luochen1990/rainbow'
-Plugin 'junegunn/fzf'
-Plugin 'tpope/vim-obsession'
+Plug 'bling/vim-airline'
+" Plug 'bling/vim-bufferline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'gcmt/wildfire.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent' " vii dai yai cii
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-projectionist'
+Plug 'junegunn/vim-easy-align'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'critiqjo/vsearch.vim'
+Plug 'luochen1990/rainbow'
+Plug 'junegunn/fzf'
+Plug 'tpope/vim-obsession'
 
 " for autocomplete
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-" Plugin 'Shougo/neocomplete.vim'
-if has('nvim')
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'roxma/nvim-yarp'
-  Plugin 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " for syntastic check
-" Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
-Plugin 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.vim'
 
 " show marks
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 
-Plugin 'prettier/vim-prettier'
-
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
@@ -174,23 +157,6 @@ let g:deoplete#enable_at_startup = 1
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
-" for syntastic check
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_enable_javascript_checker = 1
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exec = 'eslint'
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_error_symbol = '✗'
-" let g:syntastic_warning_symbol = '⚠'
-" let g:syntastic_scss_checkers = ['stylelint']
-" let g:syntastic_enable_less_checker = 1
-" let g:syntastic_less_checkers = ['css/stylelint']
-" let g:syntastic_auto_loc_list = 0
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
-
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
 
@@ -202,12 +168,12 @@ let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
 
 
 " for session
-set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
-    nmap <leader>sl :SessionList<CR>
-    nmap <leader>ss :SessionSave<CR>
-    nmap <leader>sc :SessionClose<CR>
-endif
+" set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+" if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
+"     nmap <leader>sl :SessionList<CR>
+"     nmap <leader>ss :SessionSave<CR>
+"     nmap <leader>sc :SessionClose<CR>
+" endif
 
 " for textobj-indent
 " nmap <leader>ti <Plug>(textobj-indent-i)
@@ -243,121 +209,6 @@ function! InitializeDirectories()
     endfor
 endfunction
 call InitializeDirectories()
-
-" open omnifunc, copy from spf13
-"if isdirectory($HOME . "/.vim/bundle/neocomplete.vim")
-"  let g:acp_enableAtStartup = 0
-"  let g:neocomplete#enable_at_startup = 1
-"  let g:neocomplete#enable_smart_case = 1
-"  let g:neocomplete#enable_auto_delimiter = 1
-"  let g:neocomplete#max_list = 15
-"  let g:neocomplete#force_overwrite_completefunc = 1
-
-
-"  " Define dictionary.
-"  let g:neocomplete#sources#dictionary#dictionaries = {
-"              \ 'default' : '',
-"              \ 'vimshell' : $HOME.'/.vimshell_hist',
-"              \ 'scheme' : $HOME.'/.gosh_completions'
-"              \ }
-
-"  " Define keyword.
-"  if !exists('g:neocomplete#keyword_patterns')
-"      let g:neocomplete#keyword_patterns = {}
-"  endif
-"  let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-"  " Plugin key-mappings {
-"      " These two lines conflict with the default digraph mapping of <C-K>
-"      if !exists('g:spf13_no_neosnippet_expand')
-"          imap <C-k> <Plug>(neosnippet_expand_or_jump)
-"          smap <C-k> <Plug>(neosnippet_expand_or_jump)
-"      endif
-"      if exists('g:spf13_noninvasive_completion')
-"          inoremap <CR> <CR>
-"          " <ESC> takes you out of insert mode
-"          inoremap <expr> <Esc>   pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
-"          " <CR> accepts first, then sends the <CR>
-"          inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
-"          " <Down> and <Up> cycle like <Tab> and <S-Tab>
-"          inoremap <expr> <Down>  pumvisible() ? "\<C-n>" : "\<Down>"
-"          inoremap <expr> <Up>    pumvisible() ? "\<C-p>" : "\<Up>"
-"          " Jump up and down the list
-"          inoremap <expr> <C-d>   pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
-"          inoremap <expr> <C-u>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
-"      else
-"          " <C-k> Complete Snippet
-"          " <C-k> Jump to next snippet point
-"          imap <silent><expr><C-k> neosnippet#expandable() ?
-"                      \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-"                      \ "\<C-e>" : "\<Plug>(neosnippet_expand_or_jump)")
-"          smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
-
-"          inoremap <expr><C-g> neocomplete#undo_completion()
-"          inoremap <expr><C-l> neocomplete#complete_common_string()
-"          "inoremap <expr><CR> neocomplete#complete_common_string()
-
-"          " <CR>: close popup
-"          " <s-CR>: close popup and save indent.
-"          inoremap <expr><s-CR> pumvisible() ? neocomplete#smart_close_popup()."\<CR>" : "\<CR>"
-
-"          function! CleverCr()
-"              if pumvisible()
-"                  if neosnippet#expandable()
-"                      let exp = "\<Plug>(neosnippet_expand)"
-"                      return exp . neocomplete#smart_close_popup()
-"                  else
-"                      return neocomplete#smart_close_popup()
-"                  endif
-"              else
-"                  return "\<CR>"
-"              endif
-"          endfunction
-
-"          " <CR> close popup and save indent or expand snippet
-"          imap <expr> <CR> CleverCr()
-"          " <C-h>, <BS>: close popup and delete backword char.
-"          inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"          inoremap <expr><C-y> neocomplete#smart_close_popup()
-"      endif
-"      " <TAB>: completion.
-"      inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-"      inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-
-"      " Courtesy of Matteo Cavalleri
-
-"      function! CleverTab()
-"          if pumvisible()
-"              return "\<C-n>"
-"          endif
-"          let substr = strpart(getline('.'), 0, col('.') - 1)
-"          let substr = matchstr(substr, '[^ \t]*$')
-"          if strlen(substr) == 0
-"              " nothing to match on empty string
-"              return "\<Tab>"
-"          else
-"              " existing text matching
-"              if neosnippet#expandable_or_jumpable()
-"                  return "\<Plug>(neosnippet_expand_or_jump)"
-"              else
-"                  return neocomplete#start_manual_complete()
-"              endif
-"          endif
-"      endfunction
-
-"      imap <expr> <Tab> CleverTab()
-"  " }
-
-"  " Enable heavy omni completion.
-"  if !exists('g:neocomplete#sources#omni#input_patterns')
-"      let g:neocomplete#sources#omni#input_patterns = {}
-"  endif
-"  let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"  let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-"endif
 
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s

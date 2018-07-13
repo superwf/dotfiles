@@ -37,6 +37,7 @@ noremap <F8> :qa<ENTER>
 nnoremap <c-j> <ESC>mzA,<ESC>`z
 nnoremap <c-k> :ALENext<ENTER>
 nnoremap <c-l> :ALEPrevious<ENTER>
+nnoremap <c-]> :ALEGoToDefinition<ENTER>
 nnoremap Zz :q<ENTER>
 nnoremap Zw :w<ENTER>
 
@@ -77,7 +78,6 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 filetype off
 " set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin('~/.vim/bundle')
-" Plug 'VundleVim/Vundle.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " syntax
@@ -87,7 +87,7 @@ Plug 'groenewege/vim-less'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug' " for jade template file
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'vim-scripts/nginx.vim'
 Plug 'posva/vim-vue'
 
@@ -112,14 +112,14 @@ Plug 'kana/vim-textobj-indent' " vii dai yai cii
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-projectionist'
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'critiqjo/vsearch.vim'
-Plug 'vim-scripts/matchit.zip'
-Plug 'vim-scripts/sessionman.vim'
-Plug 'vim-scripts/restore_view.vim'
-Plug 'luochen1990/rainbow'
+" Plug 'vim-scripts/matchit.zip'
+" Plug 'vim-scripts/sessionman.vim'
+" Plug 'vim-scripts/restore_view.vim'
+Plug 'luochen1990/rainbow' " trouble with javascript new line indent
 Plug 'junegunn/fzf'
 Plug 'tpope/vim-obsession'
 
@@ -163,6 +163,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 300
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
@@ -374,7 +375,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'tslint'],
 \   'scss': ['prettier', 'stylelint'],
-\   'css': ['stylelint'],
+\   'css': ['prettier', 'stylelint'],
 \   'less': ['prettier', 'stylelint'],
 \}
 let g:ale_fix_on_save = 1
@@ -386,7 +387,7 @@ let g:ale_sign_warning = '⚠'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_lint_on_enter = 0
 " let g:ale_lint_on_text_changed = 'never'
-let g:ale_fix_delay = 1000
+let g:ale_fix_delay = 300
 
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
