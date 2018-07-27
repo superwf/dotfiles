@@ -28,7 +28,7 @@ syntax on
 noremap <F2> :w<ENTER>
 noremap <F3> :FZF<ENTER>
 noremap <F4> :ALELint<ENTER>
-noremap <F5> :e!<ENTER> " reload current file
+noremap <F5> :cprevious<ENTER>
 noremap <F6> :cnext<ENTER>
 noremap <F7> :source ./Session.vim<ENTER>
 noremap <F8> :qa<ENTER>
@@ -54,7 +54,7 @@ set fencs=utf-8,gbk,ucs-bom,gb18030,euc-jp,gb2312,cp936
 " set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
 set fillchars+=stl:\ ,stlnc:\
 set expandtab
-color ron
+color elflord
 set fileformats=unix
 set viminfo='200,%,!,<50,s10,h,rA,rB,/50,:50
 set noignorecase
@@ -64,7 +64,7 @@ set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.br
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 " set wildignore+=*/bower_components/*,*/node_modules/*
-set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/doc/*,*/source_maps/*
+set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/source_maps/*
 set wildmenu " Hitting TAB in command mode will show possible completions above command line
 set wildmode=list:longest " Complete only until point of ambiguity
 set wrapscan " Searches wrap around end of file
@@ -163,7 +163,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 300
+" let g:deoplete#auto_complete_delay = 300
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
@@ -238,139 +238,18 @@ function! InitializeDirectories()
 endfunction
 call InitializeDirectories()
 
-" open omnifunc, copy from spf13
-"if isdirectory($HOME . "/.vim/bundle/neocomplete.vim")
-"  let g:acp_enableAtStartup = 0
-"  let g:neocomplete#enable_at_startup = 1
-"  let g:neocomplete#enable_smart_case = 1
-"  let g:neocomplete#enable_auto_delimiter = 1
-"  let g:neocomplete#max_list = 15
-"  let g:neocomplete#force_overwrite_completefunc = 1
-
-
-"  " Define dictionary.
-"  let g:neocomplete#sources#dictionary#dictionaries = {
-"              \ 'default' : '',
-"              \ 'vimshell' : $HOME.'/.vimshell_hist',
-"              \ 'scheme' : $HOME.'/.gosh_completions'
-"              \ }
-
-"  " Define keyword.
-"  if !exists('g:neocomplete#keyword_patterns')
-"      let g:neocomplete#keyword_patterns = {}
-"  endif
-"  let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-"  " Plugin key-mappings {
-"      " These two lines conflict with the default digraph mapping of <C-K>
-"      if !exists('g:spf13_no_neosnippet_expand')
-"          imap <C-k> <Plug>(neosnippet_expand_or_jump)
-"          smap <C-k> <Plug>(neosnippet_expand_or_jump)
-"      endif
-"      if exists('g:spf13_noninvasive_completion')
-"          inoremap <CR> <CR>
-"          " <ESC> takes you out of insert mode
-"          inoremap <expr> <Esc>   pumvisible() ? "\<C-y>\<Esc>" : "\<Esc>"
-"          " <CR> accepts first, then sends the <CR>
-"          inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
-"          " <Down> and <Up> cycle like <Tab> and <S-Tab>
-"          inoremap <expr> <Down>  pumvisible() ? "\<C-n>" : "\<Down>"
-"          inoremap <expr> <Up>    pumvisible() ? "\<C-p>" : "\<Up>"
-"          " Jump up and down the list
-"          inoremap <expr> <C-d>   pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
-"          inoremap <expr> <C-u>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
-"      else
-"          " <C-k> Complete Snippet
-"          " <C-k> Jump to next snippet point
-"          imap <silent><expr><C-k> neosnippet#expandable() ?
-"                      \ "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ?
-"                      \ "\<C-e>" : "\<Plug>(neosnippet_expand_or_jump)")
-"          smap <TAB> <Right><Plug>(neosnippet_jump_or_expand)
-
-"          inoremap <expr><C-g> neocomplete#undo_completion()
-"          inoremap <expr><C-l> neocomplete#complete_common_string()
-"          "inoremap <expr><CR> neocomplete#complete_common_string()
-
-"          " <CR>: close popup
-"          " <s-CR>: close popup and save indent.
-"          inoremap <expr><s-CR> pumvisible() ? neocomplete#smart_close_popup()."\<CR>" : "\<CR>"
-
-"          function! CleverCr()
-"              if pumvisible()
-"                  if neosnippet#expandable()
-"                      let exp = "\<Plug>(neosnippet_expand)"
-"                      return exp . neocomplete#smart_close_popup()
-"                  else
-"                      return neocomplete#smart_close_popup()
-"                  endif
-"              else
-"                  return "\<CR>"
-"              endif
-"          endfunction
-
-"          " <CR> close popup and save indent or expand snippet
-"          imap <expr> <CR> CleverCr()
-"          " <C-h>, <BS>: close popup and delete backword char.
-"          inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"          inoremap <expr><C-y> neocomplete#smart_close_popup()
-"      endif
-"      " <TAB>: completion.
-"      inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-"      inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
-
-"      " Courtesy of Matteo Cavalleri
-
-"      function! CleverTab()
-"          if pumvisible()
-"              return "\<C-n>"
-"          endif
-"          let substr = strpart(getline('.'), 0, col('.') - 1)
-"          let substr = matchstr(substr, '[^ \t]*$')
-"          if strlen(substr) == 0
-"              " nothing to match on empty string
-"              return "\<Tab>"
-"          else
-"              " existing text matching
-"              if neosnippet#expandable_or_jumpable()
-"                  return "\<Plug>(neosnippet_expand_or_jump)"
-"              else
-"                  return neocomplete#start_manual_complete()
-"              endif
-"          endif
-"      endfunction
-
-"      imap <expr> <Tab> CleverTab()
-"  " }
-
-"  " Enable heavy omni completion.
-"  if !exists('g:neocomplete#sources#omni#input_patterns')
-"      let g:neocomplete#sources#omni#input_patterns = {}
-"  endif
-"  let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"  let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"  let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-"endif
-
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s
 
-" for prettier
-" let g:prettier#exec_cmd_async = 1
-" let g:prettier#quickfix_enabled = 0
-" let g:prettier#autoformat = 0
-" let g:prettier#config#use_tabs = 'false'
-" let g:prettier#config#semi = 'false'
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql Prettier
-
 " for ale syntax checker
 let g:ale_linters = {
+\   'html': ['tidy'],
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint', 'tsserver'],
 \}
 let g:ale_fixers = {
+\   'html': ['tidy'],
 \   'json': ['prettier'],
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'tslint'],
@@ -387,6 +266,7 @@ let g:ale_sign_warning = '⚠'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_lint_on_enter = 0
 " let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_delay = 300
 let g:ale_fix_delay = 300
 
 function! LinterStatus() abort
