@@ -1,18 +1,18 @@
 [user]
-	name = superwf
-	email = superwf@gmail.com
+  name = superwf
+  email = superwf@gmail.com
 [core]
   autocrlf = false
   eol = lf
-	editor = vim
-	pager = less
+  editor = vi
+  pager = less
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [color]
-	ui = true
+  ui = true
 [alias]
-	ci = commit
-	co = checkout
+  ci = commit
+  co = checkout
   unstage = reset HEAD
   last = log -1 HEAD
   ammend = commit --amend
@@ -53,3 +53,5 @@
     test -z $branch && echo \"branch required.\" 1>&2 && exit 1; \
     git push origin :$branch; \
   }; f"
+[credential]
+  helper = store
