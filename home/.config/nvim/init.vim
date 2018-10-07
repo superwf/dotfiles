@@ -35,6 +35,7 @@ noremap <F8> :qa<ENTER>
 
 " auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
+nnoremap <c-i> :ImportJSFix<ENTER>
 nnoremap <c-k> :ALENext<ENTER>
 nnoremap <c-l> :ALEPrevious<ENTER>
 nnoremap <c-]> :ALEGoToDefinition<ENTER>
@@ -64,7 +65,7 @@ set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.br
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 " set wildignore+=*/bower_components/*,*/node_modules/*
-set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/source_maps/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/source_maps/*
 set wildmenu " Hitting TAB in command mode will show possible completions above command line
 set wildmode=list:longest " Complete only until point of ambiguity
 set wrapscan " Searches wrap around end of file
@@ -126,6 +127,7 @@ Plug 'tpope/vim-obsession'
 " for autocomplete
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Galooshi/vim-import-js'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " for syntastic check
