@@ -35,6 +35,7 @@ noremap <F8> :qa<ENTER>
 
 " auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
+nnoremap <c-i> :ImportJSFix<ENTER>
 nnoremap <c-k> :ALENext<ENTER>
 nnoremap <c-l> :ALEPrevious<ENTER>
 nnoremap <c-]> :ALEGoToDefinition<ENTER>
@@ -126,6 +127,7 @@ Plug 'tpope/vim-obsession'
 " for autocomplete
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Galooshi/vim-import-js'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " for syntastic check
