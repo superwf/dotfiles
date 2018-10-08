@@ -64,7 +64,7 @@ set suffixes=.bak,~,.swp,.swo,.o,.d,.info,.aux,.log,.dvi,.pdf,.bin,.bbl,.blg,.br
 set wildignore+=.DS_Store
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.o,*.obj,*.min.js
 " set wildignore+=*/bower_components/*,*/node_modules/*
-set wildignore+=*/smarty/*,*/vendor/*,*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/source_maps/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/ckeditor/*,*/source_maps/*
 set wildmenu " Hitting TAB in command mode will show possible completions above command line
 set wildmode=list:longest " Complete only until point of ambiguity
 set wrapscan " Searches wrap around end of file
@@ -251,7 +251,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   'html': ['tidy'],
 \   'json': ['prettier'],
-\   'javascript': ['prettier', 'eslint'],
+\   'javascript': ['eslint', 'prettier'],
 \   'typescript': ['prettier', 'tslint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
