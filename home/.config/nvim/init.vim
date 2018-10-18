@@ -55,7 +55,6 @@ set fencs=utf-8,gbk,ucs-bom,gb18030,euc-jp,gb2312,cp936
 " set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
 set fillchars+=stl:\ ,stlnc:\
 set expandtab
-color elflord
 set fileformats=unix
 set viminfo='200,%,!,<50,s10,h,rA,rB,/50,:50
 set noignorecase
@@ -139,9 +138,15 @@ Plug 'iamcco/markdown-preview.vim'
 " show marks
 Plug 'kshenoy/vim-signature'
 
-" Plug 'prettier/vim-prettier'
+" for colorscheme
+" Plug 'ashfinal/vim-one'
+Plug 'tomasr/molokai'
 
 call plug#end()
+
+" set background=dark        " for the light version
+" let g:one_allow_italics = 1 " I love italic for comments
+colorscheme molokai
 
 filetype plugin indent on
 
@@ -195,19 +200,6 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2   " Always show the statusline
 
 let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
-
-
-" for session
-set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
-if isdirectory(expand("~/.vim/bundle/sessionman.vim/"))
-    nmap <leader>sl :SessionList<CR>
-    nmap <leader>ss :SessionSave<CR>
-    nmap <leader>sc :SessionClose<CR>
-endif
-
-" for textobj-indent
-" nmap <leader>ti <Plug>(textobj-indent-i)
-" nmap <leader>ta <Plug>(textobj-indent-a)
 
 " copy from spf13
 " 将swap, undo, backup, cursor在当前文件的保存位置的文件移到.vim文件夹中
