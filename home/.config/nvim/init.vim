@@ -119,9 +119,11 @@ Plug 'critiqjo/vsearch.vim'
 " Plug 'vim-scripts/matchit.zip'
 " Plug 'vim-scripts/sessionman.vim'
 " Plug 'vim-scripts/restore_view.vim'
-Plug 'luochen1990/rainbow' " trouble with javascript new line indent
+" Plug 'luochen1990/rainbow' " trouble with javascript new line indent
+Plug 'kien/rainbow_parentheses.vim'
 Plug 'junegunn/fzf'
 Plug 'tpope/vim-obsession'
+Plug 'terryma/vim-multiple-cursors'
 
 " for autocomplete
 Plug 'SirVer/ultisnips'
@@ -140,7 +142,9 @@ Plug 'kshenoy/vim-signature'
 
 " for colorscheme
 " Plug 'ashfinal/vim-one'
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
+Plug 'flazz/vim-colorschemes'
+
 
 call plug#end()
 
@@ -152,6 +156,8 @@ colorscheme molokai
 " https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
 " color code see https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 hi MatchParen cterm=bold ctermbg=058 ctermfg=118
+hi Visual ctermfg=118 ctermbg=241 gui=none
+
 
 filetype plugin indent on
 
@@ -285,3 +291,9 @@ set statusline=%{LinterStatus()}
 
 " fzf set
 set rtp+=~/.fzf
+
+" for rainbow_parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
