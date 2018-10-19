@@ -148,6 +148,11 @@ call plug#end()
 " let g:one_allow_italics = 1 " I love italic for comments
 colorscheme molokai
 
+" set cursor color on paren
+" https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
+" color code see https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+hi MatchParen cterm=bold ctermbg=129 ctermfg=118
+
 filetype plugin indent on
 
 " for git fugitive
