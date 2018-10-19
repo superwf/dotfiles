@@ -151,7 +151,7 @@ colorscheme molokai
 " set cursor color on paren
 " https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
 " color code see https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
-hi MatchParen cterm=bold ctermbg=129 ctermfg=118
+hi MatchParen cterm=bold ctermbg=058 ctermfg=118
 
 filetype plugin indent on
 
