@@ -183,3 +183,7 @@ export EDITOR=/usr/bin/vi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export FZF_DEFAULT_COMMAND='fd --type f'
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+  alias nvim='echo "No nesting!"'
+fi

@@ -132,7 +132,6 @@ Plug 'Galooshi/vim-import-js'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " for syntastic check
-" Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 
 Plug 'iamcco/markdown-preview.vim'
@@ -140,16 +139,11 @@ Plug 'iamcco/markdown-preview.vim'
 " show marks
 Plug 'kshenoy/vim-signature'
 
-" for colorscheme
-" Plug 'ashfinal/vim-one'
-" Plug 'tomasr/molokai'
+" many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
-
 
 call plug#end()
 
-" set background=dark        " for the light version
-" let g:one_allow_italics = 1 " I love italic for comments
 colorscheme molokai
 
 " set cursor color on paren
@@ -158,16 +152,12 @@ colorscheme molokai
 hi MatchParen cterm=bold ctermbg=058 ctermfg=118
 hi Visual ctermfg=118 ctermbg=241 gui=none
 
-
 filetype plugin indent on
 
 " for git fugitive
 if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
   set statusline+=%{fugitive#statusline()}
 endif
-
-" for rainbow
-let g:rainbow_active=1
 
 " for autocomplete
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -183,26 +173,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:deoplete#enable_at_startup = 1
 " let g:deoplete#auto_complete_delay = 300
 
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-
-" for syntastic check
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_enable_javascript_checker = 1
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exec = 'eslint'
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_error_symbol = '✗'
-" let g:syntastic_warning_symbol = '⚠'
-" let g:syntastic_scss_checkers = ['stylelint']
-" let g:syntastic_enable_less_checker = 1
-" let g:syntastic_less_checkers = ['css/stylelint']
-" let g:syntastic_auto_loc_list = 0
-" let g:syntastic_check_on_open = 0
-" let g:syntastic_check_on_wq = 0
-
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
 
@@ -213,7 +183,7 @@ set laststatus=2   " Always show the statusline
 let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
 
 " copy from spf13
-" 将swap, undo, backup, cursor在当前文件的保存位置的文件移到.vim文件夹中
+" move swap, undo, backup, directory to ~/.vim
 function! InitializeDirectories()
     let parent = $HOME . '/.vim/'
     let dir_list = {
@@ -292,8 +262,42 @@ set statusline=%{LinterStatus()}
 " fzf set
 set rtp+=~/.fzf
 
-" for rainbow_parentheses
+" start for rainbow_parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['darkgreen',        'RoyalBlue3'],
+    \ ['darkcyan',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
+" end for rainbow_parentheses
+
+" for terminal in neovim
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+  tnoremap <M-h> <c-\><c-n><c-w>h
+  tnoremap <M-j> <c-\><c-n><c-w>j
+  tnoremap <M-k> <c-\><c-n><c-w>k
+  tnoremap <M-l> <c-\><c-n><c-w>l
+endif
