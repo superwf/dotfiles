@@ -90,6 +90,7 @@ Plug 'digitaltoad/vim-pug' " for jade template file
 " Plug 'tpope/vim-rails'
 Plug 'vim-scripts/nginx.vim'
 Plug 'posva/vim-vue'
+Plug 'alvan/vim-closetag'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
@@ -222,12 +223,13 @@ let g:ale_linters = {
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint', 'tsserver'],
+\   'markdown': ['markdownlint'],
 \}
 let g:ale_fixers = {
 \   'html': ['tidy'],
 \   'json': ['prettier'],
-\   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['prettier', 'tslint'],
+\   'javascript': ['eslint'],
+\   'typescript': ['tslint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
 \   'less': ['prettier', 'stylelint'],
@@ -310,3 +312,9 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checkti
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+" for autoclose tags
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
+au BufNewFile,BufRead *.ejs set filetype=js
