@@ -1,0 +1,20 @@
+{
+  "libs": [
+    "browser",
+    "ecma5",
+    "ecma6",
+    "jest"
+  ],
+  "plugins": {
+    "node": {},
+    "es_modules": {},
+    "commonjs": {},
+    "modules": {},
+    "node_resolve": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
+  },
+  "ecmaVersion": 6
+}

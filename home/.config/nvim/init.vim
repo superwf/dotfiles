@@ -131,6 +131,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Galooshi/vim-import-js'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ternjs/tern_for_vim'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'Shougo/neco-vim'
 
 " for syntastic check
 Plug 'w0rp/ale'
@@ -226,7 +229,7 @@ let g:ale_linters = {
 \   'markdown': ['markdownlint'],
 \}
 let g:ale_fixers = {
-\   'html': ['tidy'],
+\   'html': ['prettier'],
 \   'json': ['prettier'],
 \   'javascript': ['eslint'],
 \   'typescript': ['tslint'],
