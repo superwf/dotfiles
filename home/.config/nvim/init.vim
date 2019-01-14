@@ -30,7 +30,7 @@ noremap <F3> :FZF<ENTER>
 noremap <F4> :ALELint<ENTER>
 noremap <F5> :cprevious<ENTER>
 noremap <F6> :cnext<ENTER>
-noremap <F7> :source ./Session.vim<ENTER>
+noremap <F7> "+y
 noremap <F8> :qa<ENTER>
 
 " auto insert ',' to end of line
@@ -107,9 +107,9 @@ Plug 'tpope/vim-commentary'
 Plug 'bling/vim-airline'
 " Plug 'bling/vim-bufferline'
 Plug 'jiangmiao/auto-pairs'
-Plug 'gcmt/wildfire.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-indent' " vii dai yai cii
+Plug 'gcmt/wildfire.vim' "use ENTER to select code in block
+" Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-indent' " vii dai yai cii
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-projectionist'
