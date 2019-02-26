@@ -39,6 +39,7 @@ nnoremap <c-i> :ImportJSFix<ENTER>
 nnoremap <c-k> :ALENext<ENTER>
 nnoremap <c-l> :ALEPrevious<ENTER>
 nnoremap <c-]> :ALEGoToDefinition<ENTER>
+nnoremap <c-h> :ALEDetail<ENTER>
 nnoremap Zz :q<ENTER>
 nnoremap Zw :w<ENTER>
 
@@ -87,8 +88,7 @@ Plug 'groenewege/vim-less'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug' " for jade template file
-" Plug 'tpope/vim-rails'
-Plug 'vim-scripts/nginx.vim'
+Plug 'chr4/nginx.vim'
 Plug 'posva/vim-vue'
 Plug 'alvan/vim-closetag'
 
@@ -145,6 +145,10 @@ Plug 'kshenoy/vim-signature'
 
 " many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
+
+" code review
+Plug 'junkblocker/patchreview-vim'
+Plug 'codegram/vim-codereview'
 
 call plug#end()
 
@@ -232,7 +236,7 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'json': ['prettier'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tslint'],
+\   'typescript': ['tslint', 'prettier'],
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
 \   'less': ['prettier', 'stylelint'],
@@ -320,4 +324,4 @@ autocmd FileChangedShellPost *
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
-au BufNewFile,BufRead *.ejs set filetype=js
+au BufNewFile,BufRead *.ejs set filetype=javascript
