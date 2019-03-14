@@ -138,7 +138,7 @@ Plug 'Shougo/neco-vim'
 " for syntastic check
 Plug 'w0rp/ale'
 
-Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " show marks
 Plug 'kshenoy/vim-signature'
