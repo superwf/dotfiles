@@ -94,7 +94,8 @@ Plug 'alvan/vim-closetag'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " for git
 Plug 'tpope/vim-fugitive'
