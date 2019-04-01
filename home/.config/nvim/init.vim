@@ -180,6 +180,10 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:deoplete#enable_at_startup = 1
+autocmd FileType typescript
+       \ call deoplete#custom#buffer_option('auto_complete', v:false)
+autocmd FileType typescript.tsx
+       \ call deoplete#custom#buffer_option('auto_complete', v:false)
 " let g:deoplete#auto_complete_delay = 300
 
 " for .js file could use jsx syntax
