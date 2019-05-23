@@ -91,11 +91,12 @@ Plug 'digitaltoad/vim-pug' " for jade template file
 Plug 'chr4/nginx.vim'
 Plug 'posva/vim-vue'
 Plug 'alvan/vim-closetag'
+Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
-" Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
+" Plug 'HerringtonDarkholme/yats.vim'
 
 " for git
 Plug 'tpope/vim-fugitive'
@@ -135,6 +136,15 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ternjs/tern_for_vim'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'Shougo/neco-vim'
+Plug 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 " for syntastic check
 Plug 'w0rp/ale'
@@ -234,7 +244,7 @@ let g:ale_linters = {
 \   'html': ['tidy'],
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tslint', 'tsserver'],
+\   'typescript': ['tsserver'],
 \   'markdown': ['markdownlint'],
 \}
 let g:ale_fixers = {
@@ -245,6 +255,7 @@ let g:ale_fixers = {
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
 \   'less': ['prettier', 'stylelint'],
+\   'dart': ['dartfmt'],
 \}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
