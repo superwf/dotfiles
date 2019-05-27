@@ -92,6 +92,8 @@ Plug 'chr4/nginx.vim'
 Plug 'posva/vim-vue'
 Plug 'alvan/vim-closetag'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'roxma/nvim-completion-manager'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
@@ -196,6 +198,10 @@ autocmd FileType less,css,html,javascript,scss
        \ call deoplete#custom#buffer_option('auto_complete', v:true)
 " let g:deoplete#auto_complete_delay = 300
 
+let g:LanguageClient_serverCommands = {
+ \ 'dart': ['dart_language_server'],
+ \ }
+
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
 
@@ -246,6 +252,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver'],
 \   'markdown': ['markdownlint'],
+\   'dart': ['dartanalyzer', 'language_server'],
 \}
 let g:ale_fixers = {
 \   'html': ['prettier'],
