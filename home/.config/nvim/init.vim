@@ -92,8 +92,10 @@ Plug 'chr4/nginx.vim'
 Plug 'posva/vim-vue'
 Plug 'alvan/vim-closetag'
 Plug 'dart-lang/dart-vim-plugin'
+" ALE的linter的language_server在nvim下不工作，只能用LanguageClient连接dart_language_server
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-Plug 'roxma/nvim-completion-manager'
+" 下面这个与ale有冲突
+" Plug 'roxma/nvim-completion-manager'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
@@ -135,8 +137,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Galooshi/vim-import-js'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'ternjs/tern_for_vim'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'ternjs/tern_for_vim'
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'Shougo/neco-vim'
 Plug 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -192,15 +194,18 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:deoplete#enable_at_startup = 1
-autocmd FileType typescript,typescript.tsx
+autocmd FileType typescript,typescript.tsx,dart
        \ call deoplete#custom#buffer_option('auto_complete', v:false)
 autocmd FileType less,css,html,javascript,scss
        \ call deoplete#custom#buffer_option('auto_complete', v:true)
 " let g:deoplete#auto_complete_delay = 300
 
+" 需要先安装 pub global activate dart_language_server
 let g:LanguageClient_serverCommands = {
  \ 'dart': ['dart_language_server'],
  \ }
+autocmd FileType dart
+       \ LanguageClientStart
 
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
@@ -252,8 +257,9 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver'],
 \   'markdown': ['markdownlint'],
-\   'dart': ['dartanalyzer', 'language_server'],
 \}
+
+" 'dart': ['dartanalyzer', 'language_server'],
 let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'json': ['prettier'],
