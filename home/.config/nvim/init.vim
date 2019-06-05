@@ -24,7 +24,6 @@ set mouse=a
 " 	 	\ | wincmd p | diffthis
 
 set number
-syntax on
 noremap <F2> :w<ENTER>
 noremap <F3> :FZF<ENTER>
 noremap <F4> :ALELint<ENTER>
@@ -77,14 +76,15 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 
 " set the runtime path to include Vundle and initialize
 filetype off
-" set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.nvim/bundle')
 Plug 'editorconfig/editorconfig-vim'
 
 " syntax
 Plug 'isRuslan/vim-es6'
 Plug 'elzr/vim-json'
 Plug 'groenewege/vim-less'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug' " for jade template file
@@ -92,82 +92,73 @@ Plug 'chr4/nginx.vim'
 Plug 'posva/vim-vue'
 Plug 'alvan/vim-closetag'
 Plug 'dart-lang/dart-vim-plugin'
-" ALE的linter的language_server在nvim下不工作，只能用LanguageClient连接dart_language_server
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-" 下面这个与ale有冲突
-" Plug 'roxma/nvim-completion-manager'
 
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-markdown'
 Plug 'leafgarland/typescript-vim'
-" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'HerringtonDarkholme/yats.vim' " yet another ts syntax
 
 " for git
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify' " show git diff status on sider
 
 " for comment code
 Plug 'tpope/vim-commentary'
 
 
-Plug 'bling/vim-airline'
-" Plug 'bling/vim-bufferline'
-Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline' " show many vim status at bottom bar
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
 Plug 'gcmt/wildfire.vim' "use ENTER to select code in block
-" Plug 'kana/vim-textobj-user'
+" Plug 'kana/vim-textobj-user' 
 " Plug 'kana/vim-textobj-indent' " vii dai yai cii
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-projectionist'
-" Plug 'junegunn/vim-easy-align'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'critiqjo/vsearch.vim'
-" Plug 'vim-scripts/matchit.zip'
-" Plug 'vim-scripts/sessionman.vim'
-" Plug 'vim-scripts/restore_view.vim'
+Plug 'tpope/vim-surround' "replace surround pairs
+Plug 'tpope/vim-abolish' "easily search for, substitute, and abbreviate multiple variants of a word
+Plug 'tpope/vim-projectionist' " project file jump
+" Plug 'junegunn/vim-easy-align' " from prettier exists, easy align no use anymore
+Plug 'critiqjo/vsearch.vim' " search the word which is selected
+" Plug 'vim-scripts/matchit.zip' " vim could jump between pairs without it, may by this function is already built-in.
 " Plug 'luochen1990/rainbow' " trouble with javascript new line indent
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'junegunn/fzf'
-Plug 'tpope/vim-obsession'
+Plug 'kien/rainbow_parentheses.vim' " colorful parentheses
+Plug 'junegunn/fzf' " fast search by file path name
+Plug 'tpope/vim-obsession' " use :Obsession start session
 Plug 'terryma/vim-multiple-cursors'
+" https://github.com/terryma/vim-multiple-cursors
 
 " for autocomplete
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Galooshi/vim-import-js'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'ternjs/tern_for_vim'
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'Shougo/neco-vim'
-Plug 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
+Plug 'honza/vim-snippets' " use togather with ultisnips
+Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
+" Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
+" Plug 'Shougo/vimproc.vim', {
+" \ 'build' : {
+" \     'windows' : 'tools\\update-dll-mingw',
+" \     'cygwin' : 'make -f make_cygwin.mak',
+" \     'mac' : 'make -f make_mac.mak',
+" \     'linux' : 'make',
+" \     'unix' : 'gmake',
+" \    },
+" \ }
 
 " for syntastic check
 Plug 'w0rp/ale'
 
+" markdown 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " show marks
-Plug 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature' " show marks in sider
 
 " many many colorschemes all in this
-Plug 'flazz/vim-colorschemes'
-
-" code review
-Plug 'junkblocker/patchreview-vim'
-Plug 'codegram/vim-codereview'
+" Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox' " color themes
 
 call plug#end()
 
-colorscheme molokai
+
+highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
+highlight link multiple_cursors_visual Visual
 
 " set cursor color on paren
 " https://stackoverflow.com/questions/10746750/set-vim-bracket-highlighting-colors
@@ -178,7 +169,7 @@ hi Visual ctermfg=118 ctermbg=241 gui=none
 filetype plugin indent on
 
 " for git fugitive
-if isdirectory(expand("~/.vim/bundle/vim-fugitive/"))
+if isdirectory(expand("~/.nvim/bundle/vim-fugitive/"))
   set statusline+=%{fugitive#statusline()}
 endif
 
@@ -194,18 +185,11 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 let g:deoplete#enable_at_startup = 1
-autocmd FileType typescript,typescript.tsx,dart
+autocmd FileType typescript,typescript.tsx
        \ call deoplete#custom#buffer_option('auto_complete', v:false)
-autocmd FileType less,css,html,javascript,scss
+autocmd FileType less,css,html,javascript,scss,dart
        \ call deoplete#custom#buffer_option('auto_complete', v:true)
 " let g:deoplete#auto_complete_delay = 300
-
-" 需要先安装 pub global activate dart_language_server
-let g:LanguageClient_serverCommands = {
- \ 'dart': ['dart_language_server'],
- \ }
-autocmd FileType dart
-       \ LanguageClientStart
 
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
@@ -217,9 +201,9 @@ set laststatus=2   " Always show the statusline
 let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
 
 " copy from spf13
-" move swap, undo, backup, directory to ~/.vim
+" move swap, undo, backup, directory to ~/.nvim
 function! InitializeDirectories()
-    let parent = $HOME . '/.vim/'
+    let parent = $HOME . '/.nvim/'
     let dir_list = {
                 \ 'backup': 'backupdir',
                 \ 'views': 'viewdir',
@@ -257,9 +241,8 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver'],
 \   'markdown': ['markdownlint'],
+\   'dart': ['dartanalyzer', 'language_server'],
 \}
-
-" 'dart': ['dartanalyzer', 'language_server'],
 let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'json': ['prettier'],
@@ -327,6 +310,10 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
 " end for rainbow_parentheses
+
+" onen syntax highlight and define colorscheme
+syntax on
+colorscheme gruvbox
 
 " for terminal in neovim
 if has('nvim')
