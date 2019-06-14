@@ -151,8 +151,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'kshenoy/vim-signature' " show marks in sider
 
 " many many colorschemes all in this
-" Plug 'flazz/vim-colorschemes'
-Plug 'morhetz/gruvbox' " color themes
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
@@ -239,7 +238,7 @@ let g:ale_linters = {
 \   'html': ['tidy'],
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tsserver'],
+\   'typescript': ['tsserver', 'tslint'],
 \   'markdown': ['markdownlint'],
 \   'dart': ['dartanalyzer', 'language_server'],
 \}
