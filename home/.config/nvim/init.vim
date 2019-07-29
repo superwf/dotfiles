@@ -79,23 +79,23 @@ filetype off
 call plug#begin('~/.nvim/bundle')
 Plug 'editorconfig/editorconfig-vim'
 
+" syntax all in one
+Plug 'sheerun/vim-polyglot'
 " syntax
-Plug 'isRuslan/vim-es6'
-Plug 'elzr/vim-json'
-Plug 'groenewege/vim-less'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'digitaltoad/vim-pug' " for jade template file
-Plug 'chr4/nginx.vim'
-Plug 'posva/vim-vue'
-Plug 'alvan/vim-closetag'
-Plug 'dart-lang/dart-vim-plugin'
-
-Plug 'kchmck/vim-coffee-script'
-Plug 'tpope/vim-markdown'
-Plug 'leafgarland/typescript-vim'
+" Plug 'isRuslan/vim-es6'
+" Plug 'elzr/vim-json'
+" Plug 'groenewege/vim-less'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'digitaltoad/vim-pug' " for jade template file
+" Plug 'chr4/nginx.vim'
+" Plug 'posva/vim-vue'
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'kchmck/vim-coffee-script'
+" Plug 'tpope/vim-markdown'
+" Plug 'leafgarland/typescript-vim'
 " Plug 'HerringtonDarkholme/yats.vim' " yet another ts syntax
 
 " for git
@@ -105,7 +105,7 @@ Plug 'mhinz/vim-signify' " show git diff status on sider
 " for comment code
 Plug 'tpope/vim-commentary'
 
-
+Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline' " show many vim status at bottom bar
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
@@ -152,6 +152,8 @@ Plug 'kshenoy/vim-signature' " show marks in sider
 
 " many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
+
+Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
@@ -235,7 +237,7 @@ autocmd FileType vue setlocal commentstring=//\ %s
 
 " for ale syntax checker
 let g:ale_linters = {
-\   'html': ['tidy'],
+\   'html': ['prettier'],
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'tslint'],
@@ -340,3 +342,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
 au BufNewFile,BufRead *.ejs set filetype=javascript
+
+" for Colorizer
+let g:colorizer_auto_filetype='css,less'
+let g:colorizer_skip_comments = 1
