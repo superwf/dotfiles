@@ -82,7 +82,7 @@ Plug 'editorconfig/editorconfig-vim'
 " syntax all in one
 Plug 'sheerun/vim-polyglot'
 " syntax
-" Plug 'isRuslan/vim-es6'
+
 " Plug 'elzr/vim-json'
 " Plug 'groenewege/vim-less'
 " Plug 'hail2u/vim-css3-syntax'
@@ -120,7 +120,8 @@ Plug 'critiqjo/vsearch.vim' " search the word which is selected
 " Plug 'vim-scripts/matchit.zip' " vim could jump between pairs without it, may by this function is already built-in.
 " Plug 'luochen1990/rainbow' " trouble with javascript new line indent
 Plug 'kien/rainbow_parentheses.vim' " colorful parentheses
-Plug 'junegunn/fzf' " fast search by file path name
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fast search by file path name
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-obsession' " use :Obsession start session
 Plug 'terryma/vim-multiple-cursors'
 " https://github.com/terryma/vim-multiple-cursors
@@ -128,6 +129,7 @@ Plug 'terryma/vim-multiple-cursors'
 " for autocomplete
 Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
 Plug 'honza/vim-snippets' " use togather with ultisnips
+Plug 'isRuslan/vim-es6' " for js snippets
 Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
 " Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
@@ -153,7 +155,7 @@ Plug 'kshenoy/vim-signature' " show marks in sider
 " many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
 
-Plug 'chrisbra/Colorizer'
+" Plug 'chrisbra/Colorizer'
 
 call plug#end()
 
@@ -240,7 +242,7 @@ let g:ale_linters = {
 \   'html': ['prettier'],
 \   'less': ['stylelint'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'tslint'],
+\   'typescript': ['tsserver', 'eslint'],
 \   'markdown': ['markdownlint'],
 \   'dart': ['dartanalyzer', 'language_server'],
 \}
@@ -248,7 +250,7 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'json': ['prettier'],
 \   'javascript': ['eslint'],
-\   'typescript': ['tslint', 'prettier'],
+\   'typescript': ['eslint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'css': ['prettier', 'stylelint'],
 \   'less': ['prettier', 'stylelint'],
@@ -314,35 +316,35 @@ au Syntax * RainbowParenthesesLoadChevrons
 
 " onen syntax highlight and define colorscheme
 syntax on
-colorscheme gruvbox
+  colorscheme gruvbox
 
-" for terminal in neovim
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
-  tnoremap <C-v><Esc> <Esc>
-  highlight! link TermCursor Cursor
-  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
-  tnoremap <M-h> <c-\><c-n><c-w>h
-  tnoremap <M-j> <c-\><c-n><c-w>j
-  tnoremap <M-k> <c-\><c-n><c-w>k
-  tnoremap <M-l> <c-\><c-n><c-w>l
-endif
+  " for terminal in neovim
+  if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-v><Esc> <Esc>
+    highlight! link TermCursor Cursor
+    highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+    tnoremap <M-h> <c-\><c-n><c-w>h
+    tnoremap <M-j> <c-\><c-n><c-w>j
+    tnoremap <M-k> <c-\><c-n><c-w>k
+    tnoremap <M-l> <c-\><c-n><c-w>l
+  endif
 
-" Triger `autoread` when files changes on disk
-" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
-" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-" Notification after file change
-" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
-autocmd FileChangedShellPost *
-  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+  " Triger `autoread` when files changes on disk
+  " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+  " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+  " Notification after file change
+  " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+  autocmd FileChangedShellPost *
+    \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
-" for autoclose tags
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
-let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
-au BufNewFile,BufRead *.ejs set filetype=javascript
+  " for autoclose tags
+  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
+  let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+  let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
+  au BufNewFile,BufRead *.ejs set filetype=javascript
 
-" for Colorizer
-let g:colorizer_auto_filetype='css,less'
-let g:colorizer_skip_comments = 1
+  " for Colorizer
+  " let g:colorizer_auto_filetype='css,less'
+  " let g:colorizer_skip_comments = 1
