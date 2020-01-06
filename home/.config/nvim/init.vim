@@ -100,6 +100,7 @@ Plug 'sheerun/vim-polyglot'
 
 " for git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " open browser to view git file
 Plug 'mhinz/vim-signify' " show git diff status on sider
 
 " for comment code
@@ -144,7 +145,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asy
 " \ }
 
 " for syntastic check
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " markdown 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -193,6 +194,10 @@ autocmd FileType typescript,typescript.tsx
 autocmd FileType less,css,html,javascript,scss,dart
        \ call deoplete#custom#buffer_option('auto_complete', v:true)
 " let g:deoplete#auto_complete_delay = 300
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+augroup END
 
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
@@ -237,6 +242,7 @@ call InitializeDirectories()
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s
 
+"'typescript': ['tsserver', 'eslint'],
 " for ale syntax checker
 let g:ale_linters = {
 \   'html': ['prettier'],
@@ -244,6 +250,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'typescript': ['tsserver', 'eslint'],
 \   'markdown': ['markdownlint'],
+\   'json': ['prettier'],
 \   'dart': ['dartanalyzer', 'language_server'],
 \}
 let g:ale_fixers = {
@@ -251,9 +258,9 @@ let g:ale_fixers = {
 \   'json': ['prettier'],
 \   'javascript': ['eslint'],
 \   'typescript': ['eslint'],
-\   'scss': ['prettier', 'stylelint'],
-\   'css': ['prettier', 'stylelint'],
-\   'less': ['prettier', 'stylelint'],
+\   'scss': ['stylelint'],
+\   'css': ['stylelint'],
+\   'less': ['stylelint'],
 \   'dart': ['dartfmt'],
 \}
 let g:ale_fix_on_save = 1
@@ -316,35 +323,36 @@ au Syntax * RainbowParenthesesLoadChevrons
 
 " onen syntax highlight and define colorscheme
 syntax on
-  colorscheme gruvbox
+colorscheme gruvbox
 
-  " for terminal in neovim
-  if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-    tnoremap <C-v><Esc> <Esc>
-    highlight! link TermCursor Cursor
-    highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
-    tnoremap <M-h> <c-\><c-n><c-w>h
-    tnoremap <M-j> <c-\><c-n><c-w>j
-    tnoremap <M-k> <c-\><c-n><c-w>k
-    tnoremap <M-l> <c-\><c-n><c-w>l
-  endif
+" for terminal in neovim
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+  tnoremap <M-h> <c-\><c-n><c-w>h
+  tnoremap <M-j> <c-\><c-n><c-w>j
+  tnoremap <M-k> <c-\><c-n><c-w>k
+  tnoremap <M-l> <c-\><c-n><c-w>l
+endif
 
-  " Triger `autoread` when files changes on disk
-  " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
-  " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
-  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-  " Notification after file change
-  " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
-  autocmd FileChangedShellPost *
-    \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
-  " for autoclose tags
-  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
-  let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
-  let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
-  au BufNewFile,BufRead *.ejs set filetype=javascript
+" for autoclose tags
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
+au BufNewFile,BufRead *.ejs set filetype=javascript
 
-  " for Colorizer
-  " let g:colorizer_auto_filetype='css,less'
-  " let g:colorizer_skip_comments = 1
+" for Colorizer
+" let g:colorizer_auto_filetype='css,less'
+" let g:colorizer_skip_comments = 1
+let g:github_enterprise_urls = ['http://git.jd.com']

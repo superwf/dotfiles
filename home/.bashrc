@@ -114,27 +114,21 @@ fi
 # fi
 
 # add android env to PATH
-# ANDROID_HOME="/home/wangfan/Android/Sdk"
-# PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
-# PATH="$PATH:$HOME/android-studio/bin"
+ANDROID_HOME="$HOME/Android/Sdk"
+PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/emulator"
+PATH="$PATH:$HOME/android-studio/bin"
 
-if [ -f ~/.keychain/$HOSTNAME-sh ]; then
-  . ~/.keychain/$HOSTNAME-sh
-else
-  keychain ~/.ssh/sino-servers
-fi
-# if [ -f ~/.nvm/nvm.sh ]; then
-#   source ~/.nvm/nvm.sh
-# fi
 PATH="$PATH:./node_modules/.bin"
-export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+export NVM_NODEJS_ORG_MIRROR=http://npm.m.jd.com/mirrors/node
 
 export VBOX_HWVIRTEX_IGNORE_SVM_IN_USE=true
 
 export GOPATH="/home/wangfan/golang"
 export GOROOT="/home/wangfan/golang"
 PATH="$PATH:$GOPATH/bin"
-export VAGRANT_DEFAULT_PROVIDER=libvirt
+PATH="$PATH:/home/wangfan/.deno/bin"
+
+# export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 # [[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
 
@@ -180,7 +174,8 @@ export EDITOR=/usr/bin/vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+# export FZF_DEFAULT_COMMAND='fd -H --type f'
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
   alias nvim='echo "No nesting!"'
@@ -192,3 +187,19 @@ fi
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+source ~/.bash_profile
+
+PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin:$HOME/download/flutter/bin"
+
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+SASS_BINARY_SITE=http://storage.jd.com/mirrors/node-sass
+
+export ELECTRON_MIRROR="http://npm.m.jd.com/mirrors/electron/"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+# [ -f /mnt/sdb/nodes/myelectronapp/node_modules/tabtab/.completions/electron-forge.bash ] && . /mnt/sdb/nodes/myelectronapp/node_modules/tabtab/.completions/electron-forge.bash
+# export ELECTRON_ENABLE_LOGGING=1

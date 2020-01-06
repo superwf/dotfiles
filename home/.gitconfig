@@ -15,7 +15,7 @@
   co = checkout
   unstage = reset HEAD
   last = log -1 HEAD
-  ammend = commit --amend
+  amend = commit --amend
   merged = branch --merged
   unmerged = branch --no-merged
   rm-cache = rm --cache
@@ -53,6 +53,14 @@
     test -z $branch && echo \"branch required.\" 1>&2 && exit 1; \
     git push origin :$branch; \
   }; f"
+
+  log-graph = "log --graph --pretty=format:'%h - %d %s (%cr) <%an>'"
+
+  view-commit = "!f() { \
+    commit=$1; \
+    git show $commit | vi -R -; \
+  }; f"
+
 [credential]
   helper = store
 [push]
