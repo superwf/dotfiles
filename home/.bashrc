@@ -91,6 +91,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias gcc='gcc -Wall'
 alias r='rails'
+alias unzipcn='unzip -O cp936'
 alias gf='git flow'
 
 # Alias definitions.
@@ -102,17 +103,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-# if ! shopt -oq posix; then
-#   if [ -f /usr/share/bash-completion/bash_completion ]; then
-#     . /usr/share/bash-completion/bash_completion
-#   elif [ -f /etc/bash_completion ]; then
-#     . /etc/bash_completion
-#   fi
-# fi
-
 # add android env to PATH
 ANDROID_HOME="$HOME/Android/Sdk"
 PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/emulator"
@@ -123,20 +113,20 @@ export NVM_NODEJS_ORG_MIRROR=http://npm.m.jd.com/mirrors/node
 
 export VBOX_HWVIRTEX_IGNORE_SVM_IN_USE=true
 
-export GOPATH="/home/wangfan/golang"
-export GOROOT="/home/wangfan/golang"
+export GOPATH="$HOME/golang"
+export GOROOT="$HOME/golang"
 PATH="$PATH:$GOPATH/bin"
-PATH="$PATH:/home/wangfan/.deno/bin"
+PATH="$PATH:$HOME/.deno/bin"
 
 # export VAGRANT_DEFAULT_PROVIDER=libvirt
 
-# [[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
+# [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # for docker
 # source .bashrc_docker
 
 # Path to the bash it configuration
-export BASH_IT="/home/wangfan/bash-it"
+export BASH_IT="$HOME/bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/

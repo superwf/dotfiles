@@ -1,7 +1,6 @@
 #!/bin/bash
 
-dev="$HOME"
-dotfiles="$dev/dotfiles"
+dotfiles="$HOME/dotfiles"
 
 if [[ -d "$dotfiles" ]]; then
   echo "Symlinking dotfiles from $dotfiles"
