@@ -257,6 +257,7 @@ let g:ale_linters = {
 \   'markdown': ['markdownlint'],
 \   'json': ['prettier'],
 \   'dart': ['dartanalyzer', 'language_server'],
+\   'rust': ['cargo'],
 \}
 let g:ale_fixers = {
 \   'html': ['prettier'],
@@ -267,6 +268,7 @@ let g:ale_fixers = {
 \   'css': ['stylelint'],
 \   'less': ['stylelint'],
 \   'dart': ['dartfmt'],
+\   'rust': ['rustfmt'],
 \}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
@@ -279,6 +281,11 @@ let g:ale_lint_on_enter = 0
 " let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_delay = 300
 let g:ale_fix_delay = 300
+
+" check rust syntax
+let g:ale_rust_cargo_use_check = 1
+let g:ale_rust_cargo_check_tests = 1
+let g:ale_rust_cargo_check_examples = 1
 
 function! LinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))
