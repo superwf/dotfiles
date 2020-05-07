@@ -163,8 +163,13 @@ Plug 'flazz/vim-colorschemes'
 
 " Plug 'chrisbra/Colorizer'
 
+" copy clipboard image to markdown, need system install xclip first.
+Plug 'ferrine/md-img-paste.vim'
+
 call plug#end()
 
+" for ferrine/md-img-paste.vim
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
