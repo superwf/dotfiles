@@ -82,6 +82,7 @@ Plug 'editorconfig/editorconfig-vim'
 " syntax all in one
 Plug 'sheerun/vim-polyglot'
 " syntax
+Plug 'styled-components/vim-styled-components'
 
 " Plug 'elzr/vim-json'
 " Plug 'groenewege/vim-less'
@@ -262,13 +263,14 @@ let g:ale_linters = {
 \   'markdown': ['markdownlint'],
 \   'json': ['prettier'],
 \   'dart': ['dartanalyzer', 'language_server'],
-\   'rust': ['cargo'],
+\   'rust': ['rls', 'cargo'],
 \}
 let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'json': ['prettier'],
 \   'javascript': ['eslint'],
 \   'typescript': ['eslint'],
+\   'vue': ['eslint'],
 \   'scss': ['stylelint'],
 \   'css': ['stylelint'],
 \   'less': ['stylelint'],
