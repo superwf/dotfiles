@@ -93,6 +93,7 @@ alias gcc='gcc -Wall'
 alias r='rails'
 alias unzipcn='unzip -O cp936'
 alias gf='git flow'
+alias apt-key-update='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -108,8 +109,8 @@ ANDROID_HOME="$HOME/Android/Sdk"
 PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/emulator"
 PATH="$PATH:$HOME/android-studio/bin"
 
-PATH="$PATH:./node_modules/.bin"
-export NVM_NODEJS_ORG_MIRROR=http://npm.m.jd.com/mirrors/node
+PATH="$PATH:./node_modules/.bin:../../node_modules/.bin"
+export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 
 export VBOX_HWVIRTEX_IGNORE_SVM_IN_USE=true
 
@@ -177,7 +178,6 @@ fi
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
-source ~/.bash_profile
 
 PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin:$HOME/download/flutter/bin"
@@ -189,7 +189,13 @@ SASS_BINARY_SITE=http://storage.jd.com/mirrors/node-sass
 
 export ELECTRON_MIRROR="http://npm.m.jd.com/mirrors/electron/"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 # [ -f /mnt/sdb/nodes/myelectronapp/node_modules/tabtab/.completions/electron-forge.bash ] && . /mnt/sdb/nodes/myelectronapp/node_modules/tabtab/.completions/electron-forge.bash
 # export ELECTRON_ENABLE_LOGGING=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

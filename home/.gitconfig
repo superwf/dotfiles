@@ -1,6 +1,6 @@
 [user]
-  name = superwf
-  email = superwf@gmail.com
+	name = wangfan15
+	email = wangfan15@jd.com
 [core]
   autocrlf = false
   eol = lf
@@ -65,3 +65,5 @@
   helper = store
 [push]
 	followTags = true
+[pull]
+	ff = only

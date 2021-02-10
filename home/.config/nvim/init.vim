@@ -83,6 +83,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 " syntax
 Plug 'styled-components/vim-styled-components'
+Plug 'antonk52/vim-browserslist'
 
 " Plug 'elzr/vim-json'
 " Plug 'groenewege/vim-less'
