@@ -1,0 +1,13 @@
+{
+  "eslint.autoFixOnSave": true,
+
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json", "html"],
+  "stylelintplus.autoFixOnSave": true,
+  "json.format.enable": true,
+
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false
+}

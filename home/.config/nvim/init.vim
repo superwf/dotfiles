@@ -26,7 +26,8 @@ set mouse=a
 set number
 noremap <F2> :w<ENTER>
 noremap <F3> :FZF<ENTER>
-noremap <F4> :ALELint<ENTER>
+" noremap <F4> :ALELint<ENTER>
+noremap <F4> :CocDiagnostics<ENTER>
 noremap <F5> :cprevious<ENTER>
 noremap <F6> :cnext<ENTER>
 noremap <F7> "+y
@@ -35,12 +36,17 @@ noremap <F8> :qa<ENTER>
 " auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
 nnoremap <c-i> :ImportJSFix<ENTER>
-nnoremap <c-k> :ALENext<ENTER>
-nnoremap <c-l> :ALEPrevious<ENTER>
-nnoremap <c-]> :ALEGoToDefinition<ENTER>
-nnoremap <c-h> :ALEDetail<ENTER>
+nmap <c-]> <Plug>(coc-definition)
+nnoremap <c-h> :CocDiagnostics<ENTER>
+nmap <c-k> <Plug>(coc-diagnostic-prev)
+nmap <c-l> <Plug>(coc-diagnostic-next)
 nnoremap Zz :q<ENTER>
 nnoremap Zw :w<ENTER>
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -134,7 +140,7 @@ Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim
 Plug 'honza/vim-snippets' " use togather with ultisnips
 Plug 'isRuslan/vim-es6' " for js snippets
 Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
 " Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
 " Plug 'Shougo/vimproc.vim', {
 " \ 'build' : {
@@ -145,14 +151,16 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asy
 " \     'unix' : 'gmake',
 " \    },
 " \ }
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
+" if has('win32') || has('win64')
+"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+" else
+"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" endif
 
 " for syntastic check
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 " markdown 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -200,11 +208,11 @@ let g:UltiSnipsEnableSnipMate = 0
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-let g:deoplete#enable_at_startup = 1
-autocmd FileType typescript,typescript.tsx
-       \ call deoplete#custom#buffer_option('auto_complete', v:false)
-autocmd FileType less,css,html,javascript,scss,dart
-       \ call deoplete#custom#buffer_option('auto_complete', v:true)
+" let g:deoplete#enable_at_startup = 1
+" autocmd FileType typescript,typescript.tsx
+"        \ call deoplete#custom#buffer_option('auto_complete', v:false)
+" autocmd FileType less,css,html,javascript,scss,dart
+"        \ call deoplete#custom#buffer_option('auto_complete', v:true)
 " let g:deoplete#auto_complete_delay = 300
 augroup FiletypeGroup
   autocmd!
@@ -256,57 +264,57 @@ autocmd FileType vue setlocal commentstring=//\ %s
 
 "'typescript': ['tsserver', 'eslint'],
 " for ale syntax checker
-let g:ale_linters = {
-\   'html': ['prettier'],
-\   'less': ['stylelint'],
-\   'javascript': ['eslint'],
-\   'typescript': ['tsserver', 'eslint'],
-\   'markdown': ['markdownlint'],
-\   'json': ['prettier'],
-\   'dart': ['dartanalyzer', 'language_server'],
-\   'rust': ['rls', 'cargo'],
-\}
-let g:ale_fixers = {
-\   'html': ['prettier'],
-\   'json': ['prettier'],
-\   'javascript': ['eslint'],
-\   'typescript': ['eslint'],
-\   'vue': ['eslint'],
-\   'scss': ['stylelint'],
-\   'css': ['stylelint'],
-\   'less': ['stylelint'],
-\   'dart': ['dartfmt'],
-\   'rust': ['rustfmt'],
-\}
-let g:ale_fix_on_save = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_lint_on_enter = 0
-" let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_delay = 300
-let g:ale_fix_delay = 300
+" let g:ale_linters = {
+" \   'html': ['prettier'],
+" \   'less': ['stylelint'],
+" \   'javascript': ['eslint'],
+" \   'typescript': ['tsserver', 'eslint'],
+" \   'markdown': ['markdownlint'],
+" \   'json': ['prettier'],
+" \   'dart': ['dartanalyzer', 'language_server'],
+" \   'rust': ['rls', 'cargo'],
+" \}
+" let g:ale_fixers = {
+" \   'html': ['prettier'],
+" \   'json': ['prettier'],
+" \   'javascript': ['eslint'],
+" \   'typescript': ['eslint'],
+" \   'vue': ['eslint'],
+" \   'scss': ['stylelint'],
+" \   'css': ['stylelint'],
+" \   'less': ['stylelint'],
+" \   'dart': ['dartfmt'],
+" \   'rust': ['rustfmt'],
+" \}
+" let g:ale_fix_on_save = 1
+" let g:airline#extensions#ale#enabled = 1
+" let g:ale_completion_enabled = 1
+" let g:ale_sign_column_always = 1
+" let g:ale_sign_error = '✗'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_javascript_prettier_use_local_config = 1
+" let g:ale_lint_on_enter = 0
+" " let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_delay = 300
+" let g:ale_fix_delay = 300
 
-" check rust syntax
-let g:ale_rust_cargo_use_check = 1
-let g:ale_rust_cargo_check_tests = 1
-let g:ale_rust_cargo_check_examples = 1
+" " check rust syntax
+" let g:ale_rust_cargo_use_check = 1
+" let g:ale_rust_cargo_check_tests = 1
+" let g:ale_rust_cargo_check_examples = 1
 
-function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
+" function! LinterStatus() abort
+"     let l:counts = ale#statusline#Count(bufnr(''))
 
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
+"     let l:all_errors = l:counts.error + l:counts.style_error
+"     let l:all_non_errors = l:counts.total - l:all_errors
 
-    return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
-    \   all_non_errors,
-    \   all_errors
-    \)
-endfunction
+"     return l:counts.total == 0 ? 'OK' : printf(
+"     \   '%dW %dE',
+"     \   all_non_errors,
+"     \   all_errors
+"     \)
+" endfunction
 
 set statusline=%{LinterStatus()}
 
@@ -360,6 +368,8 @@ endif
 " Triger `autoread` when files changes on disk
 " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
 " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 " Notification after file change
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
@@ -371,6 +381,15 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
 au BufNewFile,BufRead *.ejs set filetype=javascript
+
+" augroup FiletypeGroup
+"     autocmd!
+"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+" augroup END
+"augroup FiletypeGroup
+"    autocmd!
+"    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+"augroup END
 
 " for Colorizer
 " let g:colorizer_auto_filetype='css,less'

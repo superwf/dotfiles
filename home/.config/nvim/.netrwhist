@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/wangfan/projects/hdj-main/src/component/Nprogress'
+let g:netrw_dirhist_5='/home/wangfan/projects/hdj-price-health/src/page/PriceHealthDiagnosis/TimeUnit'
+let g:netrw_dirhist_4='/mnt/sdb/nodes/slidev-promotion/styles'
+let g:netrw_dirhist_3='/mnt/sdb/nodes/webpack-with-vite-template/dist/assets'
+let g:netrw_dirhist_2='/home/wangfan/projects/hdj-follow-price/src/page/AutomaticPriceTrackingRule/store'
+let g:netrw_dirhist_1='/home/wangfan/projects/hdj-pricing/src/fetchInterceptor'
+let g:netrw_dirhist_0='/home/wangfan/projects/libra-frontend/config'
+let g:netrw_dirhist_9='/etc/nginx/sites-enabled'
+let g:netrw_dirhist_8='/home/wangfan/projects/hdj-price-health/src/page/TargetTrend'
+let g:netrw_dirhist_7='/mnt/sdb/nodes/fpe-web/yipanhuo/src/router'
