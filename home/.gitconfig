@@ -60,9 +60,7 @@
     commit=$1; \
     git show $commit | vi -R -; \
   }; f"
-
-[credential]
-  helper = store
+	change-commits = "!f() { VAR1=$1; VAR='$'$1; OLD=$2; NEW=$3; echo \"Are you sure for replace $VAR  $OLD => $NEW ?(Y/N)\";read OK;if [ \"$OK\" = 'Y' ] ; then shift 3; git filter-branch  --env-filter \"if [ \\\"${VAR}\\\" = '$OLD' ]; then export $VAR1='$NEW';echo 'to $NEW'; fi\" $@; fi;};  f "
 [push]
 	followTags = true
 [pull]

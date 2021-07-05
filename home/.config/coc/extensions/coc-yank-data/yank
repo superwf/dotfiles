@@ -1,0 +1,28 @@
+4fcf7c1947e83ea05d98acf3f75c099f|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|35|1|v|typescriptreact
+	const resultStyle = { marginTop: '3em' }
+6f0124d4ec931630f1164c9cfd4711c9|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|37|1|v|typescriptreact
+	const { LsLayout } = window
+86861ba815e35b2994202895f40029d2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|15|^v|vim
+	[g
+	]g
+dfed54796bc19be348be365a1708c5b2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|10|^v|vim
+	<c-k>
+	<c-l>
+baa2a650e122e81cfe087327161b515c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|20|V|vim
+	nnoremap <c-k> :CocNext<ENTER>
+	nnoremap <c-l> :CocPrev<ENTER>
+c6f09f5253112747d16aa2eb553074c2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|48|1|V|vim
+	nmap <silent> <c-k> <Plug>(coc-diagnostic-prev)
+	nmap <silent> <c-l> <Plug>(coc-diagnostic-next)
+1c2e82a854ea4f887b8026afa0db4a5a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|41|6|v|vim
+	<silent>
+3f16114732fd15b07b2144813dec737e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|46|1|V|vim
+	nmap <silent> gd <Plug>(coc-definition)
+5678c255eab1a5a89b6479d7db3e8fff|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|40|6|v|vim
+	<silent> gd
+efd17d972009c1e9b11d3829ad68fa27|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|10|v|vim
+	<c-]>
+f9630636e341e18e37612d592ee4d58c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|1|V|vim
+	" nnoremap <c-]> :call CocActionAsync('jumpDefinition')<ENTER>
+b7da0b3471630ba7687a5426bef7646e|file:///home/wangfan/projects/hdj-main/618_1111_FREEZE.md|17|1|v|markdown
+	http://console.jdos.jd.com/#/rebirth/rebirthweb/image

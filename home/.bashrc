@@ -185,7 +185,7 @@ export PATH="$PATH":"$HOME/.pub-cache/bin:$HOME/download/flutter/bin"
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
-SASS_BINARY_SITE=http://storage.jd.com/mirrors/node-sass
+SASS_BINARY_SITE=http://npm.m.jd.com/mirrors/node-sass
 
 export ELECTRON_MIRROR="http://npm.m.jd.com/mirrors/electron/"
 
@@ -199,3 +199,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
