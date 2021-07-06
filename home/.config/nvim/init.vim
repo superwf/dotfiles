@@ -74,6 +74,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.sass-cache/*,*/log/*,*/tmp/*,*/cked
 set wildmenu " Hitting TAB in command mode will show possible completions above command line
 set wildmode=list:longest " Complete only until point of ambiguity
 set wrapscan " Searches wrap around end of file
+set termguicolors " for coc-highlight show color
 
 set backup                  " Backups are nice ...
 set undofile                " So is persistent undo ...
@@ -88,23 +89,7 @@ Plug 'editorconfig/editorconfig-vim'
 " syntax all in one
 Plug 'sheerun/vim-polyglot'
 " syntax
-Plug 'styled-components/vim-styled-components'
 Plug 'antonk52/vim-browserslist'
-
-" Plug 'elzr/vim-json'
-" Plug 'groenewege/vim-less'
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-" Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
-" Plug 'digitaltoad/vim-pug' " for jade template file
-" Plug 'chr4/nginx.vim'
-" Plug 'posva/vim-vue'
-" Plug 'dart-lang/dart-vim-plugin'
-" Plug 'kchmck/vim-coffee-script'
-" Plug 'tpope/vim-markdown'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'HerringtonDarkholme/yats.vim' " yet another ts syntax
 
 " for git
 Plug 'tpope/vim-fugitive'
@@ -119,46 +104,19 @@ Plug 'vim-airline/vim-airline' " show many vim status at bottom bar
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs' "Insert or delete brackets, parens, quotes in pair.
 Plug 'gcmt/wildfire.vim' "use ENTER to select code in block
-" Plug 'kana/vim-textobj-user' 
-" Plug 'kana/vim-textobj-indent' " vii dai yai cii
 Plug 'tpope/vim-surround' "replace surround pairs
 Plug 'tpope/vim-abolish' "easily search for, substitute, and abbreviate multiple variants of a word
 Plug 'tpope/vim-projectionist' " project file jump
-" Plug 'junegunn/vim-easy-align' " from prettier exists, easy align no use anymore
 Plug 'critiqjo/vsearch.vim' " search the word which is selected
-" Plug 'vim-scripts/matchit.zip' " vim could jump between pairs without it, may by this function is already built-in.
 " Plug 'luochen1990/rainbow' " trouble with javascript new line indent
 Plug 'kien/rainbow_parentheses.vim' " colorful parentheses
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fast search by file path name
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fast search by file path name
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-obsession' " use :Obsession start session
 Plug 'terryma/vim-multiple-cursors'
 " https://github.com/terryma/vim-multiple-cursors
 
-" for autocomplete
-Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
-Plug 'honza/vim-snippets' " use togather with ultisnips
-Plug 'isRuslan/vim-es6' " for js snippets
-Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
-" Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
-" Plug 'Shougo/vimproc.vim', {
-" \ 'build' : {
-" \     'windows' : 'tools\\update-dll-mingw',
-" \     'cygwin' : 'make -f make_cygwin.mak',
-" \     'mac' : 'make -f make_mac.mak',
-" \     'linux' : 'make',
-" \     'unix' : 'gmake',
-" \    },
-" \ }
-" if has('win32') || has('win64')
-"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-" else
-"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-" endif
-
 " for syntastic check
-" Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
@@ -171,7 +129,7 @@ Plug 'kshenoy/vim-signature' " show marks in sider
 " many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
 
-" Plug 'chrisbra/Colorizer'
+" Plug 'chrisbra/Colorizer' " replaced by coc-highlight
 
 " copy clipboard image to markdown, need system install xclip first.
 Plug 'ferrine/md-img-paste.vim'
@@ -208,22 +166,13 @@ let g:UltiSnipsEnableSnipMate = 0
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" let g:deoplete#enable_at_startup = 1
-" autocmd FileType typescript,typescript.tsx
-"        \ call deoplete#custom#buffer_option('auto_complete', v:false)
-" autocmd FileType less,css,html,javascript,scss,dart
-"        \ call deoplete#custom#buffer_option('auto_complete', v:true)
-" let g:deoplete#auto_complete_delay = 300
-augroup FiletypeGroup
-  autocmd!
-  au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-augroup END
-
 " for .js file could use jsx syntax
 let g:jsx_ext_required=0
 
 " for airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_theme = 'badwolf'
 set laststatus=2   " Always show the statusline
 
 let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
@@ -261,60 +210,6 @@ call InitializeDirectories()
 
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s
-
-"'typescript': ['tsserver', 'eslint'],
-" for ale syntax checker
-" let g:ale_linters = {
-" \   'html': ['prettier'],
-" \   'less': ['stylelint'],
-" \   'javascript': ['eslint'],
-" \   'typescript': ['tsserver', 'eslint'],
-" \   'markdown': ['markdownlint'],
-" \   'json': ['prettier'],
-" \   'dart': ['dartanalyzer', 'language_server'],
-" \   'rust': ['rls', 'cargo'],
-" \}
-" let g:ale_fixers = {
-" \   'html': ['prettier'],
-" \   'json': ['prettier'],
-" \   'javascript': ['eslint'],
-" \   'typescript': ['eslint'],
-" \   'vue': ['eslint'],
-" \   'scss': ['stylelint'],
-" \   'css': ['stylelint'],
-" \   'less': ['stylelint'],
-" \   'dart': ['dartfmt'],
-" \   'rust': ['rustfmt'],
-" \}
-" let g:ale_fix_on_save = 1
-" let g:airline#extensions#ale#enabled = 1
-" let g:ale_completion_enabled = 1
-" let g:ale_sign_column_always = 1
-" let g:ale_sign_error = '✗'
-" let g:ale_sign_warning = '⚠'
-" let g:ale_javascript_prettier_use_local_config = 1
-" let g:ale_lint_on_enter = 0
-" " let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_delay = 300
-" let g:ale_fix_delay = 300
-
-" " check rust syntax
-" let g:ale_rust_cargo_use_check = 1
-" let g:ale_rust_cargo_check_tests = 1
-" let g:ale_rust_cargo_check_examples = 1
-
-" function! LinterStatus() abort
-"     let l:counts = ale#statusline#Count(bufnr(''))
-
-"     let l:all_errors = l:counts.error + l:counts.style_error
-"     let l:all_non_errors = l:counts.total - l:all_errors
-
-"     return l:counts.total == 0 ? 'OK' : printf(
-"     \   '%dW %dE',
-"     \   all_non_errors,
-"     \   all_errors
-"     \)
-" endfunction
 
 set statusline=%{LinterStatus()}
 
@@ -377,9 +272,11 @@ autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " for autoclose tags
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
-let g:closetag_xhtml_filetypes = 'xhtml,jsx,*.js'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js,*.ts,*.tsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js,*.ts,*.tsx'
+let g:closetag_xhtml_filetypes = 'xhtml,html'
+let g:closetag_emptyTags_caseSensitive = 1
+
 au BufNewFile,BufRead *.ejs set filetype=javascript
 
 " augroup FiletypeGroup
@@ -395,3 +292,17 @@ au BufNewFile,BufRead *.ejs set filetype=javascript
 " let g:colorizer_auto_filetype='css,less'
 " let g:colorizer_skip_comments = 1
 let g:github_enterprise_urls = ['http://git.jd.com']
+
+" use tab to expand snippets for coc-snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'

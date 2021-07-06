@@ -26,3 +26,271 @@ f9630636e341e18e37612d592ee4d58c|file:///home/wangfan/dotfiles/home/.config/nvim
 	" nnoremap <c-]> :call CocActionAsync('jumpDefinition')<ENTER>
 b7da0b3471630ba7687a5426bef7646e|file:///home/wangfan/projects/hdj-main/618_1111_FREEZE.md|17|1|v|markdown
 	http://console.jdos.jd.com/#/rebirth/rebirthweb/image
+03d3de5ccf3b9adf6eeed1fdf4aa9c31|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|144|16|v|vim
+	neco-vim
+e4e11ec67e50c1afaf2e931a11343ec9|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
+	" let g:deoplete#enable_at_startup = 1
+	" autocmd FileType typescript,typescript.tsx
+	"        \ call deoplete#custom#buffer_option('auto_complete', v:false)
+	" autocmd FileType less,css,html,javascript,scss,dart
+	"        \ call deoplete#custom#buffer_option('auto_complete', v:true)
+	" let g:deoplete#auto_complete_delay = 300
+e9a07bd074d2542c073a70db28f05d88|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
+	" augroup FiletypeGroup
+	"   autocmd!
+	"   au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+	" augroup END
+cfe7481d24fa6d45f77d8fd98001434e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
+	" command! -nargs=0 Format :call CocAction('format')
+1c22152e0b7dc55f888730b45c9c639d|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|12|1|V|typescriptreact
+	import M from 'mini-css-extract-plugin'
+e66c889cef89699434fcf52962c6aca3|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|35|1|V|typescriptreact
+	console.log(M)
+719cb7cbda9524cb559fa2cbaf6980a2|file:///home/wangfan/projects/hdj-main/package.json|36|5|v|json
+	"chenxiaochun3@jd.com"
+5f46ee725385f11d8284881d306a085f|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|7|12|v|html
+	Nginx设置proxy_cache_valid无效问题 | 老王的日志
+1093bb938a30eed2a2dbcb8685194297|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|30|1|V|html
+	    <meta itemprop="name" content="Nginx设置proxy_cache_valid无效问题" />
+	    <meta itemprop="description" content="Nginx设置proxy_cache_valid无效问题" />
+	    <meta itemprop="datePublished" content="2021-05-06T01:53:50&#43;00:00" />
+	    <meta itemprop="dateModified" content="2021-05-06T01:53:50&#43;00:00" />
+	    <meta itemprop="wordCount" content="18" />
+	
+	    <meta itemprop="keywords" content="" />
+	    <meta name="twitter:card" content="summary" />
+	    <meta name="twitter:title" content="Nginx设置proxy_cache_valid无效问题" />
+	    <meta
+	      name="twitter:description"
+	      content="Nginx设置proxy_cache_valid无效问题"
+	    />
+f797a7ac1a5582f25878c92fb577a8b8|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|18|1|V|html
+	    <meta property="og:title" content="Nginx设置proxy_cache_valid无效问题" />
+ef414997ff7ea25c4afd488d4040c0d3|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|9|1|V|html
+	    <meta name="generator" content="Hugo 0.68.3" />
+	
+72aa4d5ff43e96707aedb34304b17804|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|150|14|v|html
+	代码如下
+065228bd319d7fc9955fa0b0a8cf3841|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|1|V|html
+	          <pre>
+	            proxy_cache_path /tmp/nginx-cache levels=1:2 keys_zone=nginx-cache:10m max_size=1g inactive=1d use_temp_path=off;
+	            location / {
+	              root /var/www;
+	              proxy_cache_revalidate on;
+	              proxy_cache_valid 200 5m;
+	              proxy_cache_key $uri;
+	              proxy_cache nginx-cache;
+	              add_header  Nginx-Cache "$upstream_cache_status";
+	            }
+	          </pre>
+13c7e422480385d527f724fde310b290|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|14|v|html
+	按nginx配置文档，proxy_cache_valid应该会定期更新缓存。</p>
+a1942ac06068581d380b75ac39744d6e|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|14|v|html
+	按nginx配置文档，proxy_cache_valid应该会定期更新缓存。
+e85499ed2cdb3661d50c9aeae73fbdb3|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|152|14|v|html
+	但实际情况下，该项从没起作用，上游proxy更新后缓存也绝不会更新。
+d500ef486a825b313a0bd4ec6cd1d478|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|154|13|v|html
+	最后想到了上游http头的缓存设置问题。查看了一下发现上游果然通过Cache-Control与Expires，设置了一个超长的客户端缓存时间。
+46966e9a12bbad0aed5a785e43e8586f|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|156|1|V|html
+	          <p>
+	            通过proxy_ignore_headers指令忽略上游指定的客户端缓存头，才能让proxy_cache_valid真正起作用。代码如下：
+	          </p>
+	          <pre>
+	            proxy_ignore_headers Cache-Control Expires;
+	          </pre>
+	          <ul class="pa0"></ul>
+	          <div class="mt6 instapaper_ignoref"></div>
+7640d837b42464b8ad9149f7ce9c9883|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|153|1|V|html
+	          <p>折腾了一下午，各种语言环境全面切换，效果比ale要强太多，惊喜～</p>
+9f86a757d62c1fc3b4fdd2aff9e158bf|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|154|14|v|html
+	折腾了一下午，各种语言环境全面切换，效果比ale要强太多，惊喜～
+3e85ee6c609d01bc92586997618b6f37|file:///mnt/sdb/nodes/superwf.github.io/index.html|97|1|V|html
+	          <div class="relative w-100 mb4">
+	            <article class="bb b--black-10">
+	              <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+	                <div class="flex flex-column flex-row-ns">
+	                  <div class="blah w-100">
+	                    <h1 class="f3 fw1 athelas mt0 lh-title">
+	                      <a
+	                        href="http://superwf.github.io/p20210506/"
+	                        class="color-inherit dim link"
+	                      >
+	                        Nginx设置cache_valid无效问题
+	                      </a>
+	                    </h1>
+	                    <div
+	                      class="f6 f5-l lh-copy nested-copy-line-height nested-links"
+	                    ></div>
+	                    <a
+	                      href="http://superwf.github.io/p20210506/"
+	                      class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1"
+	                      >read more</a
+	                    >
+	                  </div>
+	                </div>
+	              </div>
+	            </article>
+	          </div>
+18bd8d604c0511e18047c116fc2c9f26|file:///mnt/sdb/nodes/superwf.github.io/index.html|104|56|v|html
+	p20210506
+b2f7a941b2911b1d86478fffa641ef03|file:///mnt/sdb/nodes/superwf.github.io/index.html|107|25|v|html
+	Nginx设置cache_valid无效问题
+fa3e5edac607a88d8fd7ecb9d6d67424|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|144|14|v|html
+	March
+c23ea780ffb7fa7f38015e7b1b572673|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|7|12|v|html
+	使用coc全面替代ale
+2518ecf4e9fde929b0dcf13b44e0c9f7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|143|1|V|vim
+	" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
+	" Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
+	" Plug 'Shougo/vimproc.vim', {
+	" \ 'build' : {
+	" \     'windows' : 'tools\\update-dll-mingw',
+	" \     'cygwin' : 'make -f make_cygwin.mak',
+	" \     'mac' : 'make -f make_mac.mak',
+	" \     'linux' : 'make',
+	" \     'unix' : 'gmake',
+	" \    },
+	" \ }
+963d90fd20a411f08d27f83805e5b0be|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|143|1|V|vim
+	" if has('win32') || has('win64')
+	"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+	" else
+	"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+	" endif
+a68f9a718658cec566736127263bd5bb|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
+	"'typescript': ['tsserver', 'eslint'],
+	" for ale syntax checker
+	" let g:ale_linters = {
+	" \   'html': ['prettier'],
+	" \   'less': ['stylelint'],
+	" \   'javascript': ['eslint'],
+	" \   'typescript': ['tsserver', 'eslint'],
+	" \   'markdown': ['markdownlint'],
+	" \   'json': ['prettier'],
+	" \   'dart': ['dartanalyzer', 'language_server'],
+	" \   'rust': ['rls', 'cargo'],
+	" \}
+	" let g:ale_fixers = {
+	" \   'html': ['prettier'],
+	" \   'json': ['prettier'],
+	" \   'javascript': ['eslint'],
+	" \   'typescript': ['eslint'],
+	" \   'vue': ['eslint'],
+	" \   'scss': ['stylelint'],
+	" \   'css': ['stylelint'],
+	" \   'less': ['stylelint'],
+	" \   'dart': ['dartfmt'],
+	" \   'rust': ['rustfmt'],
+	" \}
+d3ff67192081511b8ad4511382a2b22a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
+	" let g:ale_fix_on_save = 1
+	" let g:airline#extensions#ale#enabled = 1
+	" let g:ale_completion_enabled = 1
+	" let g:ale_sign_column_always = 1
+	" let g:ale_sign_error = '✗'
+	" let g:ale_sign_warning = '⚠'
+	" let g:ale_javascript_prettier_use_local_config = 1
+	" let g:ale_lint_on_enter = 0
+	" " let g:ale_lint_on_text_changed = 'never'
+	" let g:ale_lint_delay = 300
+	" let g:ale_fix_delay = 300
+	
+	" " check rust syntax
+	" let g:ale_rust_cargo_use_check = 1
+	" let g:ale_rust_cargo_check_tests = 1
+	" let g:ale_rust_cargo_check_examples = 1
+2e8303dfd057304eadd4340ef354c3d9|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
+	" function! LinterStatus() abort
+	"     let l:counts = ale#statusline#Count(bufnr(''))
+	
+	"     let l:all_errors = l:counts.error + l:counts.style_error
+	"     let l:all_non_errors = l:counts.total - l:all_errors
+	
+	"     return l:counts.total == 0 ? 'OK' : printf(
+	"     \   '%dW %dE',
+	"     \   all_non_errors,
+	"     \   all_errors
+	"     \)
+	" endfunction
+9078219ca184c5ceb1d7f4d186fc48de|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|7|v|vim
+	junegunn/fzf
+015a665d931d87e4fc7fb4ce96d0f64e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|v|vim
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fast search by file path name
+5f7199526715b2e67b8f1d6d830c707d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|v|vim
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+67815d1f1616ac75656044ce8d243690|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|145|1|V|vim
+	" Plug 'dense-analysis/ale'
+73dc903c75c821b45ebe602834cc87c2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|157|9|v|vim
+	chrisbra/Colorizer
+6e916a85c560d4919db45510f48dc388|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|155|7|v|vim
+	flazz/vim-colorschemes
+f030b203808d49ac09bb9598b7bebe39|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|121|7|v|vim
+	gcmt/wildfire.vim
+447f1c1e20f8739f6ce2b7cc11a0067d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|94|1|V|vim
+	" Plug 'elzr/vim-json'
+	" Plug 'groenewege/vim-less'
+	" Plug 'hail2u/vim-css3-syntax'
+	" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	" Plug 'pangloss/vim-javascript'
+	" Plug 'mxw/vim-jsx'
+	" Plug 'digitaltoad/vim-pug' " for jade template file
+	" Plug 'chr4/nginx.vim'
+	" Plug 'posva/vim-vue'
+	" Plug 'dart-lang/dart-vim-plugin'
+	" Plug 'kchmck/vim-coffee-script'
+	" Plug 'tpope/vim-markdown'
+	" Plug 'leafgarland/typescript-vim'
+	" Plug 'HerringtonDarkholme/yats.vim' " yet another ts syntax
+	
+a610ee174c4040f00bc9b9e85b277c5f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|86|7|v|vim
+	editorconfig/editorconfig-vim
+bb65e0d5428f378e1b8b05df60396ede|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|91|1|V|vim
+	" Plug 'styled-components/vim-styled-components'
+0abe886f2fd5213b74d298dee1d4cddc|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|91|7|v|vim
+	antonk52/vim-browserslist
+0ca407e18c73cd063eb8adb0382de739|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|101|7|v|vim
+	alvan/vim-closetag
+5656d7030b15eb227d02d1ae4596678b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|282|63|v|vim
+	*.ts,*.tsx
+e83389bdd4d92df8e9bc65c5a3682c4f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|284|45|v|vim
+	*.js
+aea0a98fb57f7dda408e5636f87b3bc0|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|284|40|v|vim
+	,jsx
+52e3719f1bc3dbc00f5b7c9a4a212205|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|102|7|v|vim
+	vim-airline/vim-airline
+c21f969b5f03d33d43e04f8f136e7682|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|183|47|v|vim
+	default
+39f62f9fef5da92792b4232d84f6541c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|183|47|v|vim
+	jsformatter
+4238536e5041ab6b4e228852797fe88a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|106|1|V|vim
+	" Plug 'kana/vim-textobj-user' 
+	" Plug 'kana/vim-textobj-indent' " vii dai yai cii
+387f5812030abcb3b0a8dc9fdc8eb831|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|109|1|V|vim
+	" Plug 'junegunn/vim-easy-align' " from prettier exists, easy align no use anymore
+8e11618c7a38a2aea6d6c997e43e024d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|110|1|V|vim
+	" Plug 'vim-scripts/matchit.zip' " vim could jump between pairs without it, may by this function is already built-in.
+662adf21b573e7fff965865ba75b8a85|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|110|1|V|vim
+	" Plug 'luochen1990/rainbow' " trouble with javascript new line indent
+f2297f6f60747a9863064874f4865e64|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|119|7|v|vim
+	SirVer/ultisnips
+a12876a97131bdd131d90760de68fad4|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|122|1|V|vim
+	" Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
+7bb66a7d08c1f4a2837ba0f90c55db53|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|118|7|v|vim
+	autocomplete
+a5b042daee737719c6e064bdd3cfbe45|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|1|V|vim
+	" imap <C-l> <Plug>(coc-snippets-expand)
+22884db148f0ffb0d830ba431102b0b5|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/index.tsx|11|19|v|typescriptreact
+	module
+ce5ca341d70b95f6090df81670fd771c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|77|1|V|vim
+	set termguicolors ""
+1de1ee4f42c054e3c7ffbe449f99c02b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|119|1|V|vim
+	" for snippets
+	" Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
+	" Plug 'honza/vim-snippets' " use togather with ultisnips
+	" Plug 'isRuslan/vim-es6' " for js snippets
+64a78521fe34799fcf84ded6afb83fa7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|117|3|v|vim
+	https://github.com/terryma/vim-multiple-cursors
+633ed0bc455a0639cd6d9f48f3b75b90|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|142|11|v|vim
+	multiple_cursors_cursor
+1d565b9e5303987bb1b1938d5d458bca|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/index.tsx|29|5|v|typescriptreact
+	Card
