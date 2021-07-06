@@ -359,3 +359,36 @@ d654c29eb2d5d3413c1bcbc0cdb11e3b|file:///home/wangfan/dotfiles/home/.config/nvim
 	" RainbowParentheses
 50574cbeb7a9433ad4e14c91b53570fe|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|219|1|V|vim
 	" Activate
+eead364654b94347520992aed34c25c8|file:///home/wangfan/.gitconfig|14|1|V|gitconfig
+	  ci = commit
+fffca4d67ea0a788813031b8bbc3b329|file:///home/wangfan/.gitconfig|14|8|v|gitconfig
+	commit
+0fe093ae7fbdfefbf0b2a597c9a220be|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|229|1|v|vim
+	colorscheme
+2c42f9abb1e74503b2d0b293b1585dbf|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|13|v|vim
+	vim-colorschemes
+ceabb23cf71bc5dfb5977e007f341c28|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|1|V|vim
+	Plug 'flazz/vim-colorschemes'
+558460c98b63579809a1305aaab8d691|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|130|1|V|vim
+	Plug 'xolox/vim-colorscheme-switcher'
+6db2a0462a09f7bf5425d8257e3adca2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|131|17|v|vim
+	colorscheme-switcher
+fa301042fbc2459f0a3004252c6236c5|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|49|1|V|vim
+	nmap <silent> gr <Plug>(coc-references)
+0871a21babd9a2ca995fe0b2e512c089|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|21|v|vim
+	<Plug>(coc-references)
+47bde1179ab35477cac9c9db929660f8|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|1|V|vim
+	" many many colorschemes all in this
+edb8047aedfcefcee50cd48b61e019c4|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|131|3|v|vim
+	many many colorschemes all in this
+e467ce2a67c62ce31a9ad352c09a5c80|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|233|13|v|vim
+	gruvbox
+80b6771e556f68fa3d9a58c8a83e3399|file:///home/wangfan/projects/hdj-follow-price/src/component/Department/index.tsx|183|32|v|typescriptreact
+	selectedValue
+c7e58a288f46c32a5e64a4b69808a8a1|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|^v|vim
+	" 
+	" 
+70ebe5c0f8e708be1821d913743d0fb7|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|155|1|V|html
+	          </p>
+488adba2626cdb6cddedc92723626e0c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|233|13|v|vim
+	kalahari
