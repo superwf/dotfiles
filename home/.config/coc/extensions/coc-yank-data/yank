@@ -294,3 +294,68 @@ ce5ca341d70b95f6090df81670fd771c|file:///home/wangfan/dotfiles/home/.config/nvim
 	multiple_cursors_cursor
 1d565b9e5303987bb1b1938d5d458bca|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/index.tsx|29|5|v|typescriptreact
 	Card
+8f69f405cae96630e7b3b1433b675bf0|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|291|1|V|vim
+	" for Colorizer
+	" let g:colorizer_auto_filetype='css,less'
+	" let g:colorizer_skip_comments = 1
+62de78cb5a48a5dd33de6800455ab62a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|282|1|V|vim
+	" augroup FiletypeGroup
+	"     autocmd!
+	"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+	" augroup END
+	"augroup FiletypeGroup
+	"    autocmd!
+	"    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+	"augroup END
+58083b5930fcb5920950942cda76a47f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|266|1|V|vim
+	autocmd CursorHold * silent call CocActionAsync('highlight')
+e3781923b91e775ed7b8f13b582f7a17|file:///home/wangfan/projects/hdj-follow-price/src/tool/getDepartmentByChecked.ts|40|55|v|typescript
+	: any
+632034af8c6414a465963f4189335dfa|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|112|7|v|vim
+	kien/rainbow_parentheses.vim
+b170045147786c273cf625d76d259472|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|244|1|V|vim
+	" au Syntax * RainbowParenthesesLoadChevrons
+fde4628aa169541b16652c1f459d4077|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|239|18|V|vim
+	au VimEnter * RainbowParenthesesToggle
+	au Syntax * RainbowParenthesesLoadRound
+	au Syntax * RainbowParenthesesLoadSquare
+	au Syntax * RainbowParenthesesLoadBraces
+d31eb245e25242a20f5f7495fa2e8332|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|237|1|V|vim
+	let g:rbpt_max = 16
+3905ed09cd43ff1d8ca7dfba646d94e7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|239|1|V|vim
+	
+	" Deactivate
+	RainbowParentheses!
+8e112607ccb76e79685ab88d52455d3d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|240|1|V|vim
+	" Toggle
+	:RainbowParentheses!!
+	
+	" See the enabled colors
+	:RainbowParenthesesColors
+afa686499791ad024a5877dbb8c2bd71|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|243|20|v|vim
+	lisp,clojure,
+42b1b216b90df3e382af4a74f7c79309|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|241|17|v|vim
+	lisp
+b8bc8e61c1e2c7993b6d72af2ef50ab5|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|219|1|V|vim
+	" let g:rbpt_colorpairs = [
+	"     \ ['brown',       'RoyalBlue3'],
+	"     \ ['Darkblue',    'SeaGreen3'],
+	"     \ ['darkgray',    'DarkOrchid3'],
+	"     \ ['darkgreen',   'firebrick3'],
+	"     \ ['darkcyan',    'RoyalBlue3'],
+	"     \ ['darkred',     'SeaGreen3'],
+	"     \ ['darkmagenta', 'DarkOrchid3'],
+	"     \ ['brown',       'firebrick3'],
+	"     \ ['darkgreen',        'RoyalBlue3'],
+	"     \ ['darkcyan',       'SeaGreen3'],
+	"     \ ['darkmagenta', 'DarkOrchid3'],
+	"     \ ['Darkblue',    'firebrick3'],
+	"     \ ['darkgreen',   'RoyalBlue3'],
+	"     \ ['darkcyan',    'SeaGreen3'],
+	"     \ ['darkred',     'DarkOrchid3'],
+	"     \ ['red',         'firebrick3'],
+	"     \ ]
+d654c29eb2d5d3413c1bcbc0cdb11e3b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|220|1|V|vim
+	" RainbowParentheses
+50574cbeb7a9433ad4e14c91b53570fe|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|219|1|V|vim
+	" Activate
