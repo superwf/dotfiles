@@ -47,6 +47,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> <c-c> :NextColorScheme<ENTER>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -127,6 +128,9 @@ Plug 'kshenoy/vim-signature' " show marks in sider
 
 " many many colorschemes all in this
 Plug 'flazz/vim-colorschemes'
+" preview colorscheme
+" Plug 'xolox/vim-colorscheme-switcher' " when open this, use F8 tow switch colorscheme
+" Plug 'xolox/vim-misc'
 
 " Plug 'chrisbra/Colorizer' " replaced by coc-highlight
 
@@ -226,7 +230,7 @@ set rtp+=~/.fzf
 
 " onen syntax highlight and define colorscheme
 syntax on
-colorscheme gruvbox
+colorscheme landscape
 
 " for terminal in neovim
 if has('nvim')
