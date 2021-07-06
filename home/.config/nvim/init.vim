@@ -108,8 +108,7 @@ Plug 'tpope/vim-surround' "replace surround pairs
 Plug 'tpope/vim-abolish' "easily search for, substitute, and abbreviate multiple variants of a word
 Plug 'tpope/vim-projectionist' " project file jump
 Plug 'critiqjo/vsearch.vim' " search the word which is selected
-" Plug 'luochen1990/rainbow' " trouble with javascript new line indent
-Plug 'kien/rainbow_parentheses.vim' " colorful parentheses
+" Plug 'junegunn/rainbow_parentheses.vim' " colorful parentheses
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fast search by file path name
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-obsession' " use :Obsession start session
@@ -217,31 +216,12 @@ set statusline=%{LinterStatus()}
 set rtp+=~/.fzf
 
 " start for rainbow_parentheses
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['darkgreen',        'RoyalBlue3'],
-    \ ['darkcyan',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-let g:rbpt_max = 16
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
+" Activation based on file type
+" augroup rainbow_js
+"   autocmd!
+"   autocmd FileType typescript,javascript,scheme RainbowParentheses
+" augroup END
 " end for rainbow_parentheses
 
 " onen syntax highlight and define colorscheme
@@ -260,10 +240,11 @@ if has('nvim')
   tnoremap <M-l> <c-\><c-n><c-w>l
 endif
 
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 " Triger `autoread` when files changes on disk
 " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
 " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 " Notification after file change
@@ -277,20 +258,8 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js,*.ts,*.tsx'
 let g:closetag_xhtml_filetypes = 'xhtml,html'
 let g:closetag_emptyTags_caseSensitive = 1
 
-au BufNewFile,BufRead *.ejs set filetype=javascript
+" au BufNewFile,BufRead *.ejs set filetype=javascript
 
-" augroup FiletypeGroup
-"     autocmd!
-"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-" augroup END
-"augroup FiletypeGroup
-"    autocmd!
-"    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-"augroup END
-
-" for Colorizer
-" let g:colorizer_auto_filetype='css,less'
-" let g:colorizer_skip_comments = 1
 let g:github_enterprise_urls = ['http://git.jd.com']
 
 " use tab to expand snippets for coc-snippets
