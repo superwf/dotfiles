@@ -17,6 +17,7 @@ nnoremap Q gq
 " In many terminal emulators the mouse works just fine, thus enable it.
 set mouse=a
 
+set clipboard+=unnamedplus
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -32,14 +33,17 @@ noremap <F5> :cprevious<ENTER>
 noremap <F6> :cnext<ENTER>
 noremap <F7> "+y
 noremap <F8> :qa<ENTER>
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+imap <C-l> <Plug>(coc-snippets-expand)
+imap <C-o> <Plug>(coc-tsserver-expand)
 
 " auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
-nnoremap <c-i> :ImportJSFix<ENTER>
 nmap <c-]> <Plug>(coc-definition)
 nnoremap <c-h> :CocDiagnostics<ENTER>
 nmap <c-k> <Plug>(coc-diagnostic-prev)
 nmap <c-l> <Plug>(coc-diagnostic-next)
+nnoremap <c-p> :call CocAction('pickColor')<ENTER>
 nnoremap Zz :q<ENTER>
 nnoremap Zw :w<ENTER>
 " GoTo code navigation.
@@ -135,7 +139,7 @@ Plug 'flazz/vim-colorschemes'
 " Plug 'chrisbra/Colorizer' " replaced by coc-highlight
 
 " copy clipboard image to markdown, need system install xclip first.
-Plug 'ferrine/md-img-paste.vim'
+" Plug 'ferrine/md-img-paste.vim'
 
 call plug#end()
 
@@ -230,7 +234,7 @@ set rtp+=~/.fzf
 
 " onen syntax highlight and define colorscheme
 syntax on
-colorscheme landscape
+colorscheme gruvbox
 
 " for terminal in neovim
 if has('nvim')
@@ -279,3 +283,4 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<s-tab>'

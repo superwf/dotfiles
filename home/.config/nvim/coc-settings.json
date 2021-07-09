@@ -2,12 +2,23 @@
   "eslint.autoFixOnSave": true,
 
   "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "json", "html"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "json", "html"],
   "stylelintplus.autoFixOnSave": true,
   "json.format.enable": true,
 
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "wxss.validate": false
+  "wxss.validate": false,
+
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  "typescript.format.enabled": false,
+
+  "suggest.triggerCompletionWait": 300,
+  "languageserver": {
+    "lua": {
+      "command": "lua-lsp",
+      "filetypes": ["lua"]
+    }
+  }
 }
