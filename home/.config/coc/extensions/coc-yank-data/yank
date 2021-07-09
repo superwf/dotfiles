@@ -1,394 +1,834 @@
-4fcf7c1947e83ea05d98acf3f75c099f|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|35|1|v|typescriptreact
-	const resultStyle = { marginTop: '3em' }
-6f0124d4ec931630f1164c9cfd4711c9|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|37|1|v|typescriptreact
-	const { LsLayout } = window
-86861ba815e35b2994202895f40029d2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|15|^v|vim
-	[g
-	]g
-dfed54796bc19be348be365a1708c5b2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|10|^v|vim
-	<c-k>
-	<c-l>
-baa2a650e122e81cfe087327161b515c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|20|V|vim
-	nnoremap <c-k> :CocNext<ENTER>
-	nnoremap <c-l> :CocPrev<ENTER>
-c6f09f5253112747d16aa2eb553074c2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|48|1|V|vim
-	nmap <silent> <c-k> <Plug>(coc-diagnostic-prev)
-	nmap <silent> <c-l> <Plug>(coc-diagnostic-next)
-1c2e82a854ea4f887b8026afa0db4a5a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|41|6|v|vim
-	<silent>
-3f16114732fd15b07b2144813dec737e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|46|1|V|vim
-	nmap <silent> gd <Plug>(coc-definition)
-5678c255eab1a5a89b6479d7db3e8fff|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|40|6|v|vim
-	<silent> gd
-efd17d972009c1e9b11d3829ad68fa27|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|10|v|vim
-	<c-]>
-f9630636e341e18e37612d592ee4d58c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|39|1|V|vim
-	" nnoremap <c-]> :call CocActionAsync('jumpDefinition')<ENTER>
-b7da0b3471630ba7687a5426bef7646e|file:///home/wangfan/projects/hdj-main/618_1111_FREEZE.md|17|1|v|markdown
-	http://console.jdos.jd.com/#/rebirth/rebirthweb/image
-03d3de5ccf3b9adf6eeed1fdf4aa9c31|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|144|16|v|vim
-	neco-vim
-e4e11ec67e50c1afaf2e931a11343ec9|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
-	" let g:deoplete#enable_at_startup = 1
-	" autocmd FileType typescript,typescript.tsx
-	"        \ call deoplete#custom#buffer_option('auto_complete', v:false)
-	" autocmd FileType less,css,html,javascript,scss,dart
-	"        \ call deoplete#custom#buffer_option('auto_complete', v:true)
-	" let g:deoplete#auto_complete_delay = 300
-e9a07bd074d2542c073a70db28f05d88|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
-	" augroup FiletypeGroup
-	"   autocmd!
-	"   au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-	" augroup END
-cfe7481d24fa6d45f77d8fd98001434e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|211|1|V|vim
-	" command! -nargs=0 Format :call CocAction('format')
-1c22152e0b7dc55f888730b45c9c639d|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|12|1|V|typescriptreact
-	import M from 'mini-css-extract-plugin'
-e66c889cef89699434fcf52962c6aca3|file:///home/wangfan/projects/hdj-main/src/component/App/index.tsx|35|1|V|typescriptreact
-	console.log(M)
-719cb7cbda9524cb559fa2cbaf6980a2|file:///home/wangfan/projects/hdj-main/package.json|36|5|v|json
-	"chenxiaochun3@jd.com"
-5f46ee725385f11d8284881d306a085f|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|7|12|v|html
-	Nginx设置proxy_cache_valid无效问题 | 老王的日志
-1093bb938a30eed2a2dbcb8685194297|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|30|1|V|html
-	    <meta itemprop="name" content="Nginx设置proxy_cache_valid无效问题" />
-	    <meta itemprop="description" content="Nginx设置proxy_cache_valid无效问题" />
-	    <meta itemprop="datePublished" content="2021-05-06T01:53:50&#43;00:00" />
-	    <meta itemprop="dateModified" content="2021-05-06T01:53:50&#43;00:00" />
-	    <meta itemprop="wordCount" content="18" />
-	
-	    <meta itemprop="keywords" content="" />
-	    <meta name="twitter:card" content="summary" />
-	    <meta name="twitter:title" content="Nginx设置proxy_cache_valid无效问题" />
-	    <meta
-	      name="twitter:description"
-	      content="Nginx设置proxy_cache_valid无效问题"
-	    />
-f797a7ac1a5582f25878c92fb577a8b8|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|18|1|V|html
-	    <meta property="og:title" content="Nginx设置proxy_cache_valid无效问题" />
-ef414997ff7ea25c4afd488d4040c0d3|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|9|1|V|html
-	    <meta name="generator" content="Hugo 0.68.3" />
-	
-72aa4d5ff43e96707aedb34304b17804|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|150|14|v|html
-	代码如下
-065228bd319d7fc9955fa0b0a8cf3841|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|1|V|html
-	          <pre>
-	            proxy_cache_path /tmp/nginx-cache levels=1:2 keys_zone=nginx-cache:10m max_size=1g inactive=1d use_temp_path=off;
-	            location / {
-	              root /var/www;
-	              proxy_cache_revalidate on;
-	              proxy_cache_valid 200 5m;
-	              proxy_cache_key $uri;
-	              proxy_cache nginx-cache;
-	              add_header  Nginx-Cache "$upstream_cache_status";
-	            }
-	          </pre>
-13c7e422480385d527f724fde310b290|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|14|v|html
-	按nginx配置文档，proxy_cache_valid应该会定期更新缓存。</p>
-a1942ac06068581d380b75ac39744d6e|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|151|14|v|html
-	按nginx配置文档，proxy_cache_valid应该会定期更新缓存。
-e85499ed2cdb3661d50c9aeae73fbdb3|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|152|14|v|html
-	但实际情况下，该项从没起作用，上游proxy更新后缓存也绝不会更新。
-d500ef486a825b313a0bd4ec6cd1d478|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|154|13|v|html
-	最后想到了上游http头的缓存设置问题。查看了一下发现上游果然通过Cache-Control与Expires，设置了一个超长的客户端缓存时间。
-46966e9a12bbad0aed5a785e43e8586f|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|156|1|V|html
-	          <p>
-	            通过proxy_ignore_headers指令忽略上游指定的客户端缓存头，才能让proxy_cache_valid真正起作用。代码如下：
-	          </p>
-	          <pre>
-	            proxy_ignore_headers Cache-Control Expires;
-	          </pre>
-	          <ul class="pa0"></ul>
-	          <div class="mt6 instapaper_ignoref"></div>
-7640d837b42464b8ad9149f7ce9c9883|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|153|1|V|html
-	          <p>折腾了一下午，各种语言环境全面切换，效果比ale要强太多，惊喜～</p>
-9f86a757d62c1fc3b4fdd2aff9e158bf|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|154|14|v|html
-	折腾了一下午，各种语言环境全面切换，效果比ale要强太多，惊喜～
-3e85ee6c609d01bc92586997618b6f37|file:///mnt/sdb/nodes/superwf.github.io/index.html|97|1|V|html
-	          <div class="relative w-100 mb4">
-	            <article class="bb b--black-10">
-	              <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-	                <div class="flex flex-column flex-row-ns">
-	                  <div class="blah w-100">
-	                    <h1 class="f3 fw1 athelas mt0 lh-title">
-	                      <a
-	                        href="http://superwf.github.io/p20210506/"
-	                        class="color-inherit dim link"
-	                      >
-	                        Nginx设置cache_valid无效问题
-	                      </a>
-	                    </h1>
-	                    <div
-	                      class="f6 f5-l lh-copy nested-copy-line-height nested-links"
-	                    ></div>
-	                    <a
-	                      href="http://superwf.github.io/p20210506/"
-	                      class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1"
-	                      >read more</a
-	                    >
-	                  </div>
-	                </div>
-	              </div>
-	            </article>
-	          </div>
-18bd8d604c0511e18047c116fc2c9f26|file:///mnt/sdb/nodes/superwf.github.io/index.html|104|56|v|html
-	p20210506
-b2f7a941b2911b1d86478fffa641ef03|file:///mnt/sdb/nodes/superwf.github.io/index.html|107|25|v|html
-	Nginx设置cache_valid无效问题
-fa3e5edac607a88d8fd7ecb9d6d67424|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|144|14|v|html
-	March
-c23ea780ffb7fa7f38015e7b1b572673|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|7|12|v|html
-	使用coc全面替代ale
-2518ecf4e9fde929b0dcf13b44e0c9f7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|143|1|V|vim
-	" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered asynchronous completion framework for neovim/Vim8<Paste>
-	" Plug 'Shougo/neco-vim' "The vim source for neocomplete/deoplete
-	" Plug 'Shougo/vimproc.vim', {
-	" \ 'build' : {
-	" \     'windows' : 'tools\\update-dll-mingw',
-	" \     'cygwin' : 'make -f make_cygwin.mak',
-	" \     'mac' : 'make -f make_mac.mak',
-	" \     'linux' : 'make',
-	" \     'unix' : 'gmake',
-	" \    },
-	" \ }
-963d90fd20a411f08d27f83805e5b0be|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|143|1|V|vim
-	" if has('win32') || has('win64')
-	"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-	" else
-	"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-	" endif
-a68f9a718658cec566736127263bd5bb|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
-	"'typescript': ['tsserver', 'eslint'],
-	" for ale syntax checker
-	" let g:ale_linters = {
-	" \   'html': ['prettier'],
-	" \   'less': ['stylelint'],
-	" \   'javascript': ['eslint'],
-	" \   'typescript': ['tsserver', 'eslint'],
-	" \   'markdown': ['markdownlint'],
-	" \   'json': ['prettier'],
-	" \   'dart': ['dartanalyzer', 'language_server'],
-	" \   'rust': ['rls', 'cargo'],
-	" \}
-	" let g:ale_fixers = {
-	" \   'html': ['prettier'],
-	" \   'json': ['prettier'],
-	" \   'javascript': ['eslint'],
-	" \   'typescript': ['eslint'],
-	" \   'vue': ['eslint'],
-	" \   'scss': ['stylelint'],
-	" \   'css': ['stylelint'],
-	" \   'less': ['stylelint'],
-	" \   'dart': ['dartfmt'],
-	" \   'rust': ['rustfmt'],
-	" \}
-d3ff67192081511b8ad4511382a2b22a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
-	" let g:ale_fix_on_save = 1
-	" let g:airline#extensions#ale#enabled = 1
-	" let g:ale_completion_enabled = 1
-	" let g:ale_sign_column_always = 1
-	" let g:ale_sign_error = '✗'
-	" let g:ale_sign_warning = '⚠'
-	" let g:ale_javascript_prettier_use_local_config = 1
-	" let g:ale_lint_on_enter = 0
-	" " let g:ale_lint_on_text_changed = 'never'
-	" let g:ale_lint_delay = 300
-	" let g:ale_fix_delay = 300
-	
-	" " check rust syntax
-	" let g:ale_rust_cargo_use_check = 1
-	" let g:ale_rust_cargo_check_tests = 1
-	" let g:ale_rust_cargo_check_examples = 1
-2e8303dfd057304eadd4340ef354c3d9|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|238|1|V|vim
-	" function! LinterStatus() abort
-	"     let l:counts = ale#statusline#Count(bufnr(''))
-	
-	"     let l:all_errors = l:counts.error + l:counts.style_error
-	"     let l:all_non_errors = l:counts.total - l:all_errors
-	
-	"     return l:counts.total == 0 ? 'OK' : printf(
-	"     \   '%dW %dE',
-	"     \   all_non_errors,
-	"     \   all_errors
-	"     \)
-	" endfunction
-9078219ca184c5ceb1d7f4d186fc48de|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|7|v|vim
-	junegunn/fzf
-015a665d931d87e4fc7fb4ce96d0f64e|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|v|vim
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fast search by file path name
-5f7199526715b2e67b8f1d6d830c707d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|v|vim
-	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-67815d1f1616ac75656044ce8d243690|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|145|1|V|vim
-	" Plug 'dense-analysis/ale'
-73dc903c75c821b45ebe602834cc87c2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|157|9|v|vim
-	chrisbra/Colorizer
-6e916a85c560d4919db45510f48dc388|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|155|7|v|vim
-	flazz/vim-colorschemes
-f030b203808d49ac09bb9598b7bebe39|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|121|7|v|vim
-	gcmt/wildfire.vim
-447f1c1e20f8739f6ce2b7cc11a0067d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|94|1|V|vim
-	" Plug 'elzr/vim-json'
-	" Plug 'groenewege/vim-less'
-	" Plug 'hail2u/vim-css3-syntax'
-	" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-	" Plug 'pangloss/vim-javascript'
-	" Plug 'mxw/vim-jsx'
-	" Plug 'digitaltoad/vim-pug' " for jade template file
-	" Plug 'chr4/nginx.vim'
-	" Plug 'posva/vim-vue'
-	" Plug 'dart-lang/dart-vim-plugin'
-	" Plug 'kchmck/vim-coffee-script'
-	" Plug 'tpope/vim-markdown'
-	" Plug 'leafgarland/typescript-vim'
-	" Plug 'HerringtonDarkholme/yats.vim' " yet another ts syntax
-	
-a610ee174c4040f00bc9b9e85b277c5f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|86|7|v|vim
-	editorconfig/editorconfig-vim
-bb65e0d5428f378e1b8b05df60396ede|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|91|1|V|vim
-	" Plug 'styled-components/vim-styled-components'
-0abe886f2fd5213b74d298dee1d4cddc|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|91|7|v|vim
-	antonk52/vim-browserslist
-0ca407e18c73cd063eb8adb0382de739|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|101|7|v|vim
-	alvan/vim-closetag
-5656d7030b15eb227d02d1ae4596678b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|282|63|v|vim
-	*.ts,*.tsx
-e83389bdd4d92df8e9bc65c5a3682c4f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|284|45|v|vim
-	*.js
-aea0a98fb57f7dda408e5636f87b3bc0|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|284|40|v|vim
-	,jsx
-52e3719f1bc3dbc00f5b7c9a4a212205|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|102|7|v|vim
-	vim-airline/vim-airline
-c21f969b5f03d33d43e04f8f136e7682|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|183|47|v|vim
-	default
-39f62f9fef5da92792b4232d84f6541c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|183|47|v|vim
-	jsformatter
-4238536e5041ab6b4e228852797fe88a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|106|1|V|vim
-	" Plug 'kana/vim-textobj-user' 
-	" Plug 'kana/vim-textobj-indent' " vii dai yai cii
-387f5812030abcb3b0a8dc9fdc8eb831|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|109|1|V|vim
-	" Plug 'junegunn/vim-easy-align' " from prettier exists, easy align no use anymore
-8e11618c7a38a2aea6d6c997e43e024d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|110|1|V|vim
-	" Plug 'vim-scripts/matchit.zip' " vim could jump between pairs without it, may by this function is already built-in.
-662adf21b573e7fff965865ba75b8a85|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|110|1|V|vim
-	" Plug 'luochen1990/rainbow' " trouble with javascript new line indent
-f2297f6f60747a9863064874f4865e64|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|119|7|v|vim
-	SirVer/ultisnips
-a12876a97131bdd131d90760de68fad4|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|122|1|V|vim
-	" Plug 'Galooshi/vim-import-js' " [c-i] for auto import js package
-7bb66a7d08c1f4a2837ba0f90c55db53|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|118|7|v|vim
-	autocomplete
-a5b042daee737719c6e064bdd3cfbe45|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|1|V|vim
-	" imap <C-l> <Plug>(coc-snippets-expand)
-22884db148f0ffb0d830ba431102b0b5|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/index.tsx|11|19|v|typescriptreact
-	module
-ce5ca341d70b95f6090df81670fd771c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|77|1|V|vim
-	set termguicolors ""
-1de1ee4f42c054e3c7ffbe449f99c02b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|119|1|V|vim
-	" for snippets
-	" Plug 'SirVer/ultisnips' " UltiSnips is the ultimate solution for snippets in Vim. It has tons of features and is very fast.
-	" Plug 'honza/vim-snippets' " use togather with ultisnips
-	" Plug 'isRuslan/vim-es6' " for js snippets
-64a78521fe34799fcf84ded6afb83fa7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|117|3|v|vim
-	https://github.com/terryma/vim-multiple-cursors
-633ed0bc455a0639cd6d9f48f3b75b90|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|142|11|v|vim
-	multiple_cursors_cursor
-1d565b9e5303987bb1b1938d5d458bca|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/index.tsx|29|5|v|typescriptreact
-	Card
-8f69f405cae96630e7b3b1433b675bf0|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|291|1|V|vim
-	" for Colorizer
-	" let g:colorizer_auto_filetype='css,less'
-	" let g:colorizer_skip_comments = 1
-62de78cb5a48a5dd33de6800455ab62a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|282|1|V|vim
-	" augroup FiletypeGroup
-	"     autocmd!
-	"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-	" augroup END
-	"augroup FiletypeGroup
-	"    autocmd!
-	"    au BufNewFile,BufRead *.tsx set filetype=typescript.tsx
-	"augroup END
-58083b5930fcb5920950942cda76a47f|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|266|1|V|vim
-	autocmd CursorHold * silent call CocActionAsync('highlight')
-e3781923b91e775ed7b8f13b582f7a17|file:///home/wangfan/projects/hdj-follow-price/src/tool/getDepartmentByChecked.ts|40|55|v|typescript
+d5480ebf019fa7ceb0bc9367158525cc|file:///home/wangfan/projects/hdj-follow-price/src/renderer/maxTagPlaceholder.tsx|7|78|v|typescriptreact
+	: LabelValueType[]
+d4e83f58cf7059228a2fa5821bb91173|file:///home/wangfan/projects/hdj-follow-price/src/renderer/maxTagPlaceholder.tsx|6|55|v|typescriptreact
+	export const maxTagPlaceholder: TreeSelectProps['maxTagPlaceholder'] = (
+710985982922d2fbfaa6f96ae22a7491|file:///home/wangfan/projects/hdj-follow-price/src/renderer/maxTagPlaceholder.tsx|2|1|V|typescriptreact
+	import type { LabelValueType } from 'rc-tree-select/lib/interface'
+9a3609f092ae2f59c150e5b922dbaea4|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|6|84|v|typescriptreact
+	ChangeEventExtra
+a4d5b169325584e5750c65b7f98718e9|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|3|49|v|typescriptreact
+	tree-select
+3f66ba8f0659ebc5d2f8c721fc590a04|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|3|15|v|typescriptreact
+	TreeSelectProps
+e3781923b91e775ed7b8f13b582f7a17|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/index.tsx|45|46|v|typescriptreact
 	: any
-632034af8c6414a465963f4189335dfa|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|112|7|v|vim
-	kien/rainbow_parentheses.vim
-b170045147786c273cf625d76d259472|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|244|1|V|vim
-	" au Syntax * RainbowParenthesesLoadChevrons
-fde4628aa169541b16652c1f459d4077|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|239|18|V|vim
-	au VimEnter * RainbowParenthesesToggle
-	au Syntax * RainbowParenthesesLoadRound
-	au Syntax * RainbowParenthesesLoadSquare
-	au Syntax * RainbowParenthesesLoadBraces
-d31eb245e25242a20f5f7495fa2e8332|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|237|1|V|vim
-	let g:rbpt_max = 16
-3905ed09cd43ff1d8ca7dfba646d94e7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|239|1|V|vim
+46a9ebdb80117bfa1f0cdea65438290a|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|2|14|v|typescript
+	Lazy
+22884db148f0ffb0d830ba431102b0b5|file:///home/wangfan/projects/hdj-follow-price/src/index.tsx|6|19|v|typescriptreact
+	module
+d5dce8050e435cab34bb3a99fd9498a3|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|5|1|V|typescriptreact
+	import { DepartmentTree4 } from 'component/DepartmentTree4'
+3c489a2901686d8a947e7ddc7f85e9cd|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/index.tsx|1|1|V|typescriptreact
+	export default Category
+4693dafef8c7839541db6d4990b70e2d|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|6|1|V|typescriptreact
+	import { CategoryTree4 } from 'component/CategoryTree4'
+044bc44031d06540a3185cebd748b1b3|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|7|42|v|typescriptreact
+	CategoryTree4
+0bd225610392e91b16e229ca5ed7c58d|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|13|8|V|typescriptreact
+	        )}>
+73d65faad001c951e49a72683af8fc29|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|10|3|v|typescriptreact
+	React.useEffect(() => {})
+bf5b17fac5c60d745a593b5920372235|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|10|19|v|typescriptreact
+	effect
+5c0df1a03cfe07513cd08743be8dc7db|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|8|10|v|typescriptreact
+	brandInterceptor
+bb67ff35928ca8600b0d0518f6f9f7f0|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|7|30|v|typescript
+	ShopBrand
+c534a386ef3f96158d5916c0b3863b25|file:///home/wangfan/projects/hdj-follow-price/src/store/brand.ts|6|10|v|typescript
+	getApiCommonBrandGetBrand
+db3a36f055bbb6b9d30050106bc799f9|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|7|35|v|typescript
+	getApiCommonBrandGetShopBrand
+7b95bfd8cc7990e7f2aed9ad5910523a|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|6|15|v|typescript
+	GetApiCommonBrandGetShopBrandOption
+935ed2b03a67d4a39d0f55ba36a861ca|file:///home/wangfan/projects/hdj-follow-price/src/store/brand.ts|5|24|v|typescript
+	GetApiCommonBrandGetBrandOption
+9a0cb1ce97daf9392a5236a3c226a02e|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|20|3|v|typescript
+	return getApiCommonBrandGetBrand(param).then(d => {
+	    return brandInterceptor(d.data || [])
+	  })
+ea12e487843360ab1b12f81377da1e85|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/index.tsx|9|20|V|typescriptreact
+	  console.log(tree.value)
+b5e13322a621820c0b781df235380e7d|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|20|16|V|typescript
+	  console.log(1)
+ca741e6cb8a7f8c52ca5370ef7c79920|file:///home/wangfan/projects/hdj-follow-price/tsconfig.json|27|1|V|jsonc
+	      "api/*": ["./src/api/*"],
+8f01c38df6138cbaabf7c8f638d7d9f6|file:///home/wangfan/projects/hdj-follow-price/tsconfig.json|27|8|v|jsonc
+	api/*
+3a47d6d7c0aef7055b55b2042661cd01|file:///home/wangfan/projects/hdj-follow-price/tsconfig.json|27|23|v|jsonc
+	./src/api/*
+dd19aa184c5ab123ad984791a13841c4|file:///home/wangfan/projects/hdj-follow-price/tsconfig.json|27|1|V|jsonc
+	      "mobx-value": ["./src/api/*"],
+0b30cf414468362484519b20ce46035d|file:///home/wangfan/projects/hdj-follow-price/src/index.tsx|17|1|V|typescriptreact
+	const FollowPriceRule = React.lazy(() => import(/* webpackChunkName: "FollowPriceRule" */ 'page/FollowPriceRule'))
+9e5ebdd15768ae8bcecbcfe8626fdb95|file:///home/wangfan/projects/hdj-follow-price/src/index.tsx|69|7|v|typescriptreact
+	FollowPriceRule
+2a8a1a2a149f5d230e9e435bb7f862ee|file:///home/wangfan/projects/hdj-follow-price/src/index.tsx|75|4|V|typescriptreact
+	  },
+4be895d4cbd42b2ac48cf7955c411377|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|3|15|v|typescriptreact
+	as Form4
+3bdc3b10af5f60aa8ae16eda91a2f147|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|3|1|V|typescriptreact
+	import { Form } from 'antd4'
+a07d42b6e3cc8593558f1cbb209ea434|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|8|36|v|typescriptreact
+	Brand4
+52c4c6b607a77ba246a7f581dbbda982|file:///home/wangfan/projects/hdj-follow-price/src/store/category.ts|6|10|v|typescript
+	getApiCommonCategoryGetCategoryTree
+35d39950f0f3f24975aaa7aa4899b825|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|7|45|v|typescript
+	getApiCommonCategoryGetShopCategoryTree
+a7385469ff782121ae9b48e45969e85b|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|40|94|v|typescript
+	getApiCommon
+5af0c350e14ad4e51e3f35713e71f9ad|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|19|16|V|typescript
+	  console.log(data)
+92138a9bbff7ffa96f68d9b55c777710|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|42|16|V|typescript
+	  return promise
+dfd5bf8434a084f2038d36b232e6229a|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|41|3|v|typescript
+	const promise =
+8f1b9704ed263f542d873b0f93ce11ad|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|41|66|v|typescript
+	categoryInterceptor(d.data || [])
+593225bb2e44c03c7a5dcaf4bf070749|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|1|77|v|typescript
+	, mobx
+6771abf69997e2a8f07adead478ac0c6|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|3|9|V|typescript
+	export mo
+db74fd93a134d22ecabd7bf76188cf63|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|1|1|V|typescript
+	import { mobx, mobxReactLite, mobxRequest, mobxSetter, mobxBoolean, mobxLazy } from 'mobx-value/dist/independent'
+de295ba01ad4c2b7ea493f9b721f57ae|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|3|10|v|typescript
+	mobx, mobxReactLite,
+849e579c3452de4ec581fcdc1d10360b|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|1|29|v|typescript
+	, mobxRequest, mobxSetter, mobxBoolean, mobxLazy 
+36d04951d0838fb9490a4568ce9beec2|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|3|9|v|typescript
+	 mobxRequest, mobxSetter, mobxBoolean, mobxLazy 
+8baf851266c188eb9ae6f77cea911ef8|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|3|1|v|typescript
+	console.log(
+c8781f5dec99b5c228f60dc3c51ad06f|file:///home/wangfan/projects/hdj-follow-price/src/mobx6.ts|3|8|v|typescript
+	mobxRequest, mobxSetter, mobxBoolean, mobxLazy
+e4bd4da0185ced4f22dcd44deaaf9337|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|27|33|v|typescript
+	 = ()
+85f76ac35b3d15d9b70a84e08b792e29|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|27|1|v|typescript
+	async (param) => {
+	  tree.request(param)
+	}
 	
-	" Deactivate
-	RainbowParentheses!
-8e112607ccb76e79685ab88d52455d3d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|240|1|V|vim
-	" Toggle
-	:RainbowParentheses!!
+10693a3e1b268a439ea1cc17d2435c72|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|27|35|v|typescript
+	typeof fetchBrand
+eca07335a33c5aeb5e1bc7c98b4b9d80|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|27|51|v|typescript
+	param
+a1ac983aa3e275625e47c19ef48d2cb9|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/store.ts|27|45|v|typescript
+	async 
+320ef76fd092510a669c58bbb5fa09a2|file:///home/wangfan/projects/hdj-follow-price/src/component/Brand4/index.tsx|12|29|V|typescriptreact
+	        console.log(newValue)
+03fdad155b7548884584c7c39b0c5cd2|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|16|21|v|typescriptreact
+	inline
+4505cad087312551a6fbbe6ebe163e0f|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|16|21|v|typescriptreact
+	horizontal
+1e14e35fb66980c0f5969c13c1d20d99|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|18|8|V|typescriptreact
+	        </Row>
+6c7cf6deb68740d3b89b7cd604151c9c|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|19|10|V|typescriptreact
+	          </Col>
+9c5bac7696ff6f2addc3d990a01f77f1|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|18|1|V|typescriptreact
+	          <Col span={3}>
+a4d3b161ce1309df1c4e25df28694b7b|file:///home/wangfan/projects/hdj-follow-price/src/page/Test/index.tsx|28|13|v|typescriptreact
+	Submit
+aa6b5aef40723f0e59f1ae56c72944a7|file:///home/wangfan/projects/hdj-follow-price/src/component/DepartmentTree4/store.ts|1|42|v|typescript
+	interceptor
+04d96c7c000cb20454b5ebc98c25bd08|file:///home/wangfan/projects/hdj-follow-price/src/component/DepartmentTree4/store.ts|5|1|V|typescript
+	// import type { DepartmentNode } from './departmentInterceptor'
+7d0d66ead5e41350c463994efd23925b|file:///home/wangfan/projects/hdj-follow-price/src/component/DepartmentCategoryLevel.tsx|8|1|V|typescriptreact
+	import { AppEmitter } from 'src/appEmitter'
+bdfe7a323078db14854845832849ad01|file:///home/wangfan/projects/hdj-follow-price/src/component/DepartmentTree4/emitter.ts|5|48|v|typescript
+	</Events>
+87f9f735a1d36793ceaecd4e47124b63|file:///home/wangfan/projects/hdj-follow-price/src/component/DepartmentTree4/index.tsx|6|10|v|typescriptreact
+	Events
+4d3556af7480477acf591c5f690c43b2|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/index.tsx|10|9|V|typescriptreact
+	import {  } from "antd";
+c50b383e696aeb42d5e1d97d96eeb3b2|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|30|14|V|typescriptreact
+	  tree.request
+c64e0390d9aa2b2eba426e02c96a6279|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/index.tsx|23|1|V|typescriptreact
+	      if (values && values.length > 0) {
+	      } else {
+	      }
+	      tree.request()
+19bbdc7accef498f309164aab62c3259|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|32|1|V|typescriptreact
+	        tree.request()
+18fac1fb6282d8a860982819df06fbff|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|31|21|v|typescriptreact
+	, id
+c9e9a848920877e76685b2e4e76de38d|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/helper.tsx|36|20|v|typescriptreact
+	level
+8c028bae0efdef5849fc8422d541015b|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/index.tsx|22|1|V|typescriptreact
+	    const request = (values?: string[]) => {
+	      if (values && values.length > 0) {
+	      } else {
+	      }
+	      tree.request()
+	    }
+c6f143aec9e440927cbe81dd86d319c6|file:///home/wangfan/projects/hdj-follow-price/src/component/CategoryTree4/store.ts|1|1|V|typescript
+	    console.log(d.data)
+3623b41ebcf05ae1f760337f136b1fb3|file:///home/wangfan/projects/hdj-follow-price/package.json|214|1|V|json
+	    "antd": "3.26.19",
+	    "antd4": "npm:antd@4.16.6",
+76d9d8faceb9cf85c5cee2dd4b153b77|file:///home/wangfan/projects/hdj-follow-price/package.json|214|1|V|json
+	    "antd": "3.26.19",
+23db62d486b30474d27e71302005140b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|20|1|V|vim
+	set clipboard+=unnamedplus
+a36290694544cd7b30e5b59dc7b42b8a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|25|60|v|vim
+	diffthis
+35919e8fb1cc20d1953e3c0b122bab9c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|21|1|v|vim
+	unnamedplus
+63c94539937b664dafbc776638a0f4a7|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|18|1|V|vim
+	set mouse=a
+fd2f3c71dcfd8f337ed0cb263cb21e03|file:///mnt/sdb/nodes/activity-rule-component/package.json|2|12|v|json
+	@ofc/activity-rule
+29adcbb15c08a3ff3297443d452c4672|file:///mnt/sdb/nodes/activity-rule-component/package.json|58|23|V|json
+	    "@web/test-runner-playwright": "^0.8.4",
+f0514186aecf545180fec490ada2aae2|file:///mnt/sdb/nodes/reactts/node_modules/%40types/react/index.d.ts|3040|1|V|typescript
+	declare global {
+	    namespace JSX {
+ee4c0118ed1cf0d67fe62a3542f17de2|file:///mnt/sdb/nodes/reactts/node_modules/%40types/react/index.d.ts|3060|1|V|typescript
+	        interface IntrinsicElements {
+99e89297be1a7888026a090996b7364c|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|32|1|V|typescript
+	        'activity-rule': ActivityRule;
+649e4005728732c6a6f38dae939bc617|file:///mnt/sdb/nodes/reactts/node_modules/%40types/react/index.d.ts|3062|1|V|typescript
+	            a: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
+8b93ac2498d4c31fb4b26d26bb957d4e|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|8|8|v|typescript
+	* as React
+50ce2da63bea6a618e7578fa50690040|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|39|28|v|typescript
+	React
+bc850d34056d2961457be7e52eb3763d|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|15|22|v|typescript
+	ActivityRule
+9d5d0dc4841a93d9ac8d5c0cf2724bb8|file:///home/wangfan/projects/scf-ui/packages/ui/global.d.ts|73|1|V|typescript
+	    type ScfProps<T> = HTMLAttributes<T> & ClassAttributes<T> & RefAttributes<T>
+7ec37e3958724edd867d54f023ff9b58|file:///home/wangfan/projects/scf-ui/packages/ui/global.d.ts|77|1|V|typescript
+	      'scf-layout': ScfProps<HTMLElement> & LayoutProps
+89d4bb8ead3de5cc04fe5d7275f92cad|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|39|1|V|typescript
+	              'scf-layout': ScfProps<HTMLElement> & LayoutProps
+9e6647f7d70457d1da37aaf999a0befb|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|105|v|typescript
+	HTMLAnchorElement
+2bcf7238f96f302812219b6667ea23b3|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|46|v|typescript
+	React.
+a34285645af2703a9501db6fc881e5df|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|46|v|typescript
+	Anchor
+a80ff127da510e01b41bccc63f268d86|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|40|1|V|typescript
+	          'scf-layout': MyProps<HTMLElement> & LayoutProps
+0a05112e48cc3f62019d2e3a3ebafe40|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|8|48|v|typescript
+	, ClassAttributes, RefAttributes
+328db4ecb7776156bd52599d25a93a1f|file:///mnt/sdb/nodes/reactts/src/App.tsx|4|8|v|typescriptreact
+	{  }
+57457f388f11cc2bc2eb1803f4063965|file:///mnt/sdb/nodes/reactts/src/App.tsx|4|8|v|typescriptreact
+	from 
+e5b4eda79a725877d563fdc8778cef09|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|22|v|typescriptreact
+	ruleData={{}}
+ec4875cf2d241556a0965f7237864693|file:///mnt/sdb/nodes/reactts/tsconfig.json|12|13|v|jsonc
+	preserve
+5fc85219627fd89f4631e8b98a952272|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|20|15|v|typescript
+	ActivityModel
+b84ab70e1b5dc9d4c843c6e704414238|file:///mnt/sdb/nodes/reactts/node_modules/%40types/react/index.d.ts|3114|1|V|typescript
+	            img: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>;
+741aed790181fd9561350bfd2897b79e|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|89|v|typescript
+	 & ActivityRule;
+49b2e4995697730f375687eeb653ed3f|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|15|43|v|typescript
+	LitElement
+d6ddbc426bac14e6f48ccfe886530c41|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|1|V|typescript
+	          'activity-rule': DetailedHTMLProps<HTMLAttributes<ActivityRule>, ActivityRule>;
+c957d4c1b6802d512a4148a2a21a93af|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|42|28|v|typescript
+	DetailedHTMLProps<HTMLAttributes<ActivityRule>, ActivityRule>;
+e4233ef030ae156735fe4dbdb4228039|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|42|49|v|typescript
+	</ActivityRule>
+a86c7c13916309237c114f06e5604ecb|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|15|1|v|typescript
+	export declare
+e9dd8f9d2a4993c6ff6f6a7f43aaea15|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|15|11|v|typescript
+	class 
+e1f40117c2c62704a6fd3561e05070c7|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|22|v|typescriptreact
+	ruleData
+827d50a24b14cf89441422272be5d700|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|79|v|typescript
+	{ nnn: number }
+4145afd265a6318795914f7143bb8677|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|36|36|v|typescript
+	</T>
+d48962ffb6d1b31fc552569ca1436332|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|44|46|v|typescript
+	HTMLAttributes
+ea5a1cbe764918679997181a3ea281d3|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|41|5|V|typescript
+	    }
+772ed4ac71fbcd71283cfdd15abef561|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|40|5|V|typescript
+	  namespace React {
+e5350cd2c346635c3edb88597803bcf4|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/tsg.config.ts|23|1|V|typescript
+	    source: 'http://10.170.179.117/v2/api-docs',
+45f77a12ec682c1458f29303c11d0d6e|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/tsg.config.ts|24|14|v|typescript
+	http://10.170.179.117/v2/api-docs
+48c301cd798f07373bfa5ca98882571c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/columns.tsx|46|1|V|typescriptreact
+	  {
+	    title: '建议价',
+	    width: 80,
+	    key: 'minAdvicePrice',
+	    render(record: WisPoolVO) {
+	      return <SetPricePopover record={record} />
+	    },
+	  },
+172201a9ed5e7b14c7825cdf64610025|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/columns.tsx|57|11|v|typescriptreact
+	minAdvicePrice
+04d45940c849bd73817f249715a265d0|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/columns.tsx|58|1|V|typescriptreact
+	    render(record: WisPoolVO) {
+	      return <SetPricePopover record={record} />
+	    },
+c6671c07989d30536c599612e80030f0|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|52|14|v|typescript
+	batchApplyAdvice
+02349ad6fab026ba3c46b06eccbc51a6|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|25|14|v|typescriptreact
+	SetPrice
+ab3a69586df5797c261c118d36d4309e|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|10|10|v|typescriptreact
+	batchApplyAdvice,
+f95a32560d4908920ce0f81e1db3818b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|10|10|v|typescriptreact
+	dashboardList
+d02a22723a09c0845cd5df4b81935125|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|9|31|v|typescriptreact
+	setPriceModal
+7a81381e1b2ee8bb01f7cb3a3e9a8d9d|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|7|10|v|typescriptreact
+	batchAccept
+c69963ed24eafb23be21f37d0ecf452e|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|4|8|V|typescriptreact
+	import moment from 'moment'
+14c26b90ce6481213a7993a4cea7aae8|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|2|1|V|typescriptreact
+	import type { FormInstance } from 'antd/lib/form/Form'
+959d845e4f8c86e0cc26049728d1917c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|1|23|v|typescriptreact
+	, DatePicker
+77c7f765e16f9efd8c11e18740215b1c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|1|23|v|typescriptreact
+	, Form, Popover
+358f5334c109e32572abc17c14b65c29|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|7|1|V|typescriptreact
+	// import { batchApplyAdvice, setPriceModal, wisPoolUpdateTime } from './store'
+13382defa836ef60594b35723e0c5cf4|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|13|3|V|typescript
+	  postApiShoppricingWisPoolBatchAdjustPrice,
+dcf3827d30aa6e43c379435929494b6f|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|7|23|v|typescript
+	, ReplyVOBatchOperateVO
+18be5e057f0deb5194760dd40d2df402|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|103|1|V|typescriptreact
+	export const batchAccept = (timeRange: [moment.Moment, moment.Moment]) => {
+	  const keys = toJS(dashboardList.selectedKeys) as number[]
+	  const [from, to] = timeRange
+	  const rows = dashboardList.tableProps.dataSource as WisPoolVO[]
+	  const adviceIds = rows.reduce<number[]>((result, row) => {
+	    if (keys.includes(row.skuId!)) {
+	      result.push(row.adviceId!)
+	    }
+	    return result
+	  }, [])
+	  return batchApplyAdvice
+	    .request({
+	      body: {
+	        adviceIds,
+	        beginTime: from.format(timeFormat),
+	        endTime: to.format(timeFormat),
+	      },
+	    })
+	    .then(res => {
+	      if (res) {
+	        appEmitter.emit('service:success', res.message)
+	        search()
+	      }
+	    })
+	}
+9f7611935619ac9d9d5ec0e9f2fed708|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|102|1|V|typescriptreact
+	/** 批量采纳列表中选中的值 */
+8f0c4b0c4ec5ace4cfa1cda524136362|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|5|1|V|typescriptreact
+	import { toJS } from 'mobx'
+	import type moment from 'moment'
+5b8ae8048fd93c2bc28dcd8a6b2967ab|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|9|1|V|typescriptreact
+	  batchApplyAdvice,
+b7ea821526cd5d4e512f6c2aa072813b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|13|1|V|typescriptreact
+	import { appEmitter } from '../../emitter/app'
+	import type { WisPoolVO } from '../../service/pricing'
+bec574649c875ec4d38f3a8f4d1c9e04|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|16|1|V|typescriptreact
+	import { timeFormat } from '../../tool/moment'
+b3c97834da7f9a489a4e3377292f5776|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/emitter/app.tsx|5|1|V|typescriptreact
+	import type { ReplyVOBatchOperateVO } from '../service/pricing/definition'
+0cf9127871f34d50fdf3608e16494bc4|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/emitter/app.tsx|14|1|V|typescriptreact
+	  'service:info': ReplyVOBatchOperateVO
+6322dc56e75ac25ae457853bab4697e6|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|26|12|v|typescript
+	skuId
+5be12a05a0f7a14e2a3bd69936a31533|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|28|3|v|typescript
+	requestCreatePromotion
+24cd299d562f2d3b373a8fe131020ed2|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|26|39|v|typescript
+	requestProperty
+27d68b32b4188831d5ae0f689a7c5e9e|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|90|34|v|typescriptreact
+	href="https://prom-vc.jd.com/sub_promotion/downPromHandler/create" target="blank"
+c20a44b80aa1f253a728e6242b0f8a16|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|129|5|v|typescriptreact
+	.then(res => {
+fc89de7a235749a61a77f74f0b8387c6|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|130|1|V|typescriptreact
+	    res.
+	  })
+811ec8eef9470c3134f8e87af1a918a8|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|7|47|v|typescript
+	ReplyVOShopPreAdjustPriceVO
+2b5e790a6585fad2ee83d6daf3b1306b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|131|3|v|typescriptreact
+	requestCreatePromotion.value.data
+833e9b06fbfc104c5d4cf949ea2cbb61|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|134|6|V|typescriptreact
+	    })
+ce864e8d646f6b6d870343babdf3b526|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|133|1|V|typescriptreact
+	    const url = format({
+880a0de3c6602aaf81340bed64b7027b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/helper.tsx|1|8|v|typescriptreact
+	{ format }
+61c7122d061bbbdf7b8f3fddfd498c8c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/index.tsx|45|30|v|typescriptreact
+	setVisible(true)
+afc3ff729f04164441b362d3a5a5b4b0|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|2|1|V|typescript
+	import { mobxBoolean, mobxLazy, mobxRequest, mobxSetter } from 'mobx-value'
+657c346ecf6fdae83bf5724743d0b9f7|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|7|1|V|typescript
+	import type {
+	  OptionVO,
+	  ReplyVOShopPreAdjustPriceVO,
+	  ReplyVOString,
+	  ReplyVOWisOverviewVO,
+	} from '../../service/pricing/definition'
+977026423db0be1bc13275a29a5dcc84|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|3|1|V|typescript
+	  OptionVO,
+	  ReplyVOShopPreAdjustPriceVO,
+9d003ae81da544a0270e31781643ac1b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|4|1|V|typescript
+	  ReplyVOWisOverviewVO,
+04a8f30dccc24f46797481b788c2e477|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|25|1|V|typescript
+	export const getCurrentUserEmail = mobxRequest({
+	  value: {} as ReplyVOString,
+	  request: getApiShoppricingWisPoolGetEmail,
+	})
+95065a4de1ce3d9824c851d840bb03f5|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|1|10|v|typescript
+	mobxBoolean, mobxLazy
+361cc45b0ac7a303e64e9f24a6a8b7c5|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|1|22|v|typescript
+	, mobxSetter
+f1cff6574fca8ad6f8737bbe8631ad46|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|13|1|V|typescript
+	import {
+	  getApiShoppricingWisPool,
+	  getApiShoppricingWisPoolAdviceFlagList,
+	  getApiShoppricingWisPoolGetEmail,
+	  getApiShoppricingWisPoolOverview,
+	  getApiShoppricingWisPoolWisPricingTime,
+	  postApiShoppricingWisPoolModifyAdvicePrice,
+	  postApiShoppricingWisPoolPreAdjustPrice,
+	} from '../../service/pricing/request'
+99de36d70edcea27835e75c4e2e0f22c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|5|1|V|typescript
+	  getApiShoppricingWisPool,
+	  getApiShoppricingWisPoolAdviceFlagList,
+6d31f1bcc171ece01e78cef3b797b4dc|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/store.ts|6|1|V|typescript
+	  getApiShoppricingWisPoolOverview,
+	  getApiShoppricingWisPoolWisPricingTime,
+	  postApiShoppricingWisPoolModifyAdvicePrice,
+	  postApiShoppricingWisPoolPreAdjustPrice,
+9a3cdbc1752801c4270ce7b1e212f15e|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|16|1|V|typescript
+	  getApiShoppricingWisPoolGetEmail,
+4cce618b85b848ea789d964300ac31a4|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|10|1|V|typescript
+	  ReplyVOString,
+0cf31b2c283ce3431794586df7b0996d|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/index.tsx|28|4|V|typescriptreact
+	    
+d830c872af2f88abdea7fe115a914d26|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/component/ExportData/index.tsx|27|5|v|typescriptreact
+	getCurrentUserEmail
+c9dd5bc575cccd720b5ec84527bccfb4|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|30|15|V|typescript
+	NOT_PUB(0, ""),
+a2ea53b084fb8ea38fb9a136b413ba75|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|30|1|V|typescript
+	/**
+	* 1发布中
+	*/
+95581e28bccf2384bdc0fb307c86bc56|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|26|1|V|typescript
+	  {
+	    label: '未发布',
+	    value: 0,
+	  },
+874580b9eb751814be4baa0cf8f2e563|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|35|1|V|typescript
+	PUBLISHING(1, '发布中'),
+9865831a7007e7968dd2105dca484162|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|30|1|V|typescript
+	  {
+	    label: '发布中',
+	    value: 1,
+	  },
+5906197b457b127c07c05a235d6cac22|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|47|1|V|typescript
+	  /**
+	   * 2发布成功
+	   */
+	  PUB_SUCCESS(2, '发布成功'),
+	  /**
+	   * 3发布失败
+	   */
+	  PUB_FAIL(3, '发布失败'),
+	  /**
+	   * 4发布未生效
+	   */
+	  PUB_NOT_HIT(4, '发布未生效')
+72b31e4466e4442cb832041ff709a3ef|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|44|5|V|typescript
+	    value: 4,
+28b57207e6ca7ac4224af7d17e592f64|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|1|1|V|typescript
+	import type { Item } from '../../tool/toMap'
+599dcce2998a6b40b1e38e8c6006cb0a|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|1|8|v|typescript
+	type
+7d74f3b92b19da5e606d737d339a9679|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/constant.ts|1|10|v|typescript
+	Item
+f9e0330b9b230d6ccb56cdaf74e24466|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|119|1|V|typescriptreact
+	              return getApiShoppricingWisPoolExport({
+	                query: {
+	                  ...getQuery(),
+	                  sortKey: sortKey.value,
+	                  sortSign: sortSign.value.replace(/end$/, ''),
+	                  exportEmail: values.email,
+	                  // skuIds: dashboardList.selectedKeys,
+	                },
+	              }).then(res => {
+e6bc2a9f5b41e14cf7b0777b4a89e6c7|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|117|24|v|typescriptreact
+	return 
+9b2fc4961799178fd2a510d544de4982|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|136|1|V|typescriptreact
+	                if (res.success) {
+	                  return '导出成功'
+	                }
+	                throw new Error(res.message)
+	              })
+8d63f740e29de3873742520f4327108c|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|123|1|V|typescriptreact
+	                  // skuIds: dashboardList.selectedKeys,
+e2e8d27a8a6135cb2873887fb69cdf5b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|119|17|V|typescriptreact
+	                  ...getQuery(),
+	                  sortKey: sortKey.value,
+	                  sortSign: sortSign.value.replace(/end$/, ''),
+4fa525ec7b3a1ec7e27d2bb47f4d725a|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|116|19|v|typescriptreact
+	dashboardList.selectedKeys
+67f30c02032a2e79f159f17900a10ef0|file:///home/wangfan/dotfiles/home/.config/nvim/coc-settings.json|15|3|v|jsonc
+	typescript.format.enabled
+972a1368ded513bdf35606b75d87f89d|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|31|1|V|typescript
+	const a = ADVICE_STATUS
+ae3855bd6a9a144eb68c17c12316c0db|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|73|38|V|typescript
+	export const ADVICE_STATUS: Item[] = [
+	  {
+	    value: '0',
+	    label: '未发布',
+	  },
+	  {
+	    value: '1',
+	    label: '发布中',
+	  },
+	  {
+	    value: '2',
+	    label: '发布成功',
+	  },
+	  {
+	    value: '3',
+	    label: '发布失败',
+	  },
+	  {
+	    value: '4',
+	    label: '发布未生效',
+	  },
+	]
 	
-	" See the enabled colors
-	:RainbowParenthesesColors
-afa686499791ad024a5877dbb8c2bd71|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|243|20|v|vim
-	lisp,clojure,
-42b1b216b90df3e382af4a74f7c79309|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|241|17|v|vim
-	lisp
-b8bc8e61c1e2c7993b6d72af2ef50ab5|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|219|1|V|vim
-	" let g:rbpt_colorpairs = [
-	"     \ ['brown',       'RoyalBlue3'],
-	"     \ ['Darkblue',    'SeaGreen3'],
-	"     \ ['darkgray',    'DarkOrchid3'],
-	"     \ ['darkgreen',   'firebrick3'],
-	"     \ ['darkcyan',    'RoyalBlue3'],
-	"     \ ['darkred',     'SeaGreen3'],
-	"     \ ['darkmagenta', 'DarkOrchid3'],
-	"     \ ['brown',       'firebrick3'],
-	"     \ ['darkgreen',        'RoyalBlue3'],
-	"     \ ['darkcyan',       'SeaGreen3'],
-	"     \ ['darkmagenta', 'DarkOrchid3'],
-	"     \ ['Darkblue',    'firebrick3'],
-	"     \ ['darkgreen',   'RoyalBlue3'],
-	"     \ ['darkcyan',    'SeaGreen3'],
-	"     \ ['darkred',     'DarkOrchid3'],
-	"     \ ['red',         'firebrick3'],
-	"     \ ]
-d654c29eb2d5d3413c1bcbc0cdb11e3b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|220|1|V|vim
-	" RainbowParentheses
-50574cbeb7a9433ad4e14c91b53570fe|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|219|1|V|vim
-	" Activate
-eead364654b94347520992aed34c25c8|file:///home/wangfan/.gitconfig|14|1|V|gitconfig
-	  ci = commit
-fffca4d67ea0a788813031b8bbc3b329|file:///home/wangfan/.gitconfig|14|8|v|gitconfig
+	export const ADVICE_STATUS_MAP = toMap(ADVICE_STATUS)
+8d28582a20a00d6413ed7bf5deb0ac6f|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|17|1|V|typescript
+	import { toMap } from '../../tool/toMap'
+1830e61cd999e07e3c90ebdd7e0c66dd|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/store.ts|20|10|v|typescript
+	{} as ReplyVOWisOverviewVO,
+8cd892b7b97ef9489ae4479d3f4ef0fc|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Search.tsx|9|34|v|typescriptreact
+	store
+273031829359346922d72f36983d2508|file:///home/wangfan/dotfiles/home/.config/nvim/coc-settings.json|17|1|V|jsonc
+	  "suggest.triggerCompletionWait": 300,
+cef5afcf8709802d9df274b86b8f6ca8|file:///home/wangfan/dotfiles/home/.config/nvim/coc-settings.json|18|12|v|jsonc
+	triggerCompletionWait
+fb91d3904d69424d609c7b26e1947d3a|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|40|1|V|vim
+	nnoremap <c-i> :ImportJSFix<ENTER>
+f14e536c69b8918c8018ba59bdd5f0ed|file:///home/wangfan/dotfiles/home/.config/nvim/coc-settings.json|18|1|V|jsonc
+	  "diagnostic.autoRefresh": false
+40e5d49c890a9badd029a6b61630560b|file:///home/wangfan/projects/shop.hdj.jd.com.pricing/src/page/PricingDashboard/Operation.tsx|119|21|v|typescriptreact
+	advicdIds
+c8d328a20b3821786a3d4ae8a14479d2|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|15|44|V|typescript
+	interface ActivityRule extends HTMLElement {
+	    // static styles: import("lit").CSSResultGroup;
+	    /**
+	     * 规则基础数据
+	     */
+	    ruleData: string;
+	    /**
+	     * 隐藏商家信息
+	     */
+	    // hideVender?: boolean;
+	    /**
+	     * 返利规则标签名
+	     */
+	    // ruleTitle?: string;
+	    // render(): import("lit").TemplateResult<1>;
+	}
+04dda795e0a8e7d579e6251f2b8735ef|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|22|v|typescriptreact
+	className=""
+e2f545304c18fa3667c047810ded1679|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|27|1|V|typescript
+	            // static styles: import("lit").CSSResultGroup;
+	            /**
+	             * 规则基础数据
+	             */
+79f472b0e5ef6a6e645fd7886bf61845|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|28|1|V|typescript
+	            /**
+	             * 隐藏商家信息
+	             */
+	            // hideVender?: boolean;
+	            /**
+	             * 返利规则标签名
+	             */
+	            // ruleTitle?: string;
+	            // render(): import("lit").TemplateResult<1>;
+5c155967dbc092ba7a84661a3bcd0a49|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|223|1|V|typescript
+	
+	declare global {
+	  interface HTMLElementTagNameMap {
+	    'activity-rule': ActivityRule;
+	  }
+	}
+ac66e188ee31201ffe3233b986b2b961|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|8|8|v|typescript
+	type { DetailedHTMLProps, HTMLAttributes }
+828e896d569a4e9658e4058ec2032cdf|file:///home/wangfan/.cache/typescript/3.9/node_modules/%40types/react/index.d.ts|2043|36|v|typescript
+	extends HTMLAttributes
+59db8436cff09f3c77d6e6e82996a5c0|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|1|1|V|typescript
+	/**
+	 * @license
+	 * Copyright 2019 Google LLC
+	 * SPDX-License-Identifier: BSD-3-Clause
+	 */
+	// import { LitElement } from 'lit';
+	// import { ActivityModel } from './model/ActivityModel';
+1f2c6fdec6fbd37cc8236918eae17628|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|2|1|V|typescript
+	/**
+	 * An example element.
+	 *
+	 * @slot - This element has no slot
+	 * @csspart button - The button
+	 */
+	// declare global {
+	//     interface HTMLElementTagNameMap {
+	//         'activity-rule': ActivityRule;
+	//     }
+	// }
+3e5f3237ce51a7f4e369f49b22b4b4e1|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|18|1|V|typescript
+	//# sourceMappingURL=activity-rule.d.ts.map
+bf739b5ebd48f79836dae64211db6a3d|file:///mnt/sdb/nodes/reactts/src/App.tsx|10|13|V|typescriptreact
+	      <img1 src="a" />
+b326b5062b2f0e69046810717534cb09|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|45|v|typescriptreact
+	true
+9d51f6bafa401f7ddf6f12415f6a564e|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|35|v|typescriptreact
+	ruleData={}
+da5b2b23e494f8e9504bf453305d3998|file:///mnt/sdb/nodes/reactts/node_modules/%40types/react/index.d.ts|3108|1|V|typescript
+	            header: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+d1a155a8286f170bcbdfe4eac957949b|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|31|1|V|typescript
+	    interface HTMLElementTagNameMap {
+	        'activity-rule': ActivityRule;
+	    }
+5beb18bfb6cad94a0ed97d66ae0474bc|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|225|13|v|typescript
+	HTMLElementTagNameMap
+fadb9d06e93fe85ef10ee403411d4d02|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|230|50|v|typescript
+	AnchorHTMLAttributes
+53e61336bb49ec978968786b07dea50b|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|22|v|typescriptreact
+	results
+00032fb457d7e2bcd28aa9ddb3948edf|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|229|1|V|typescript
+	// eslint-disable
+2b67e7d1c4b9d0879952d4e7a86d8d23|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|233|1|V|typescript
+	      // 'activity-rule': DetailedHTMLProps<ActiveRuleAttributes<ActivityRule>, ActivityRule>;
+b5ad6d1037554acf7ea2633b316fd55b|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|234|24|v|typescript
+	DetailedHTMLProps<ActiveRuleAttributes<ActivityRule>, ActivityRule>;
+d2867f36f908511d6aa703f03f4455cb|file:///mnt/sdb/nodes/activity-rule-component/activity-rule.d.ts|35|1|V|typescript
+	            'activity-rule': DetailedHTMLProps<ActiveRuleAttributes<ActivityRule>, ActivityRule>;
+5b0740f035caa565668b77246e967857|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|31|v|typescriptreact
+	{string} />
+a8c2a33ae18ee7b0535b47357eb16e71|file:///mnt/sdb/nodes/reactts/src/App.tsx|9|31|v|typescriptreact
+	{string}
+077d17db55825832a0b8311cb90df882|file:///mnt/sdb/nodes/activity-rule-component/src/activity-rule.ts|12|48|v|typescript
+	, ReactHTMLElement
+eec9105206597d4616211f91de236d69|file:///home/wangfan/projects/hdj-follow-price/package.json|102|6|v|json
+	@typescript-eslint/parser
+bf3720601f8e7d7fd287fced290cce59|file:///home/wangfan/projects/hdj-follow-price/package.json|101|6|v|json
+	@typescript-eslint/eslint-plugin
+6a5b92d49bd46e433550a72ad51bfc46|file:///home/wangfan/projects/hdj-follow-price/src/page/SupplierBlacklist/helper.ts|98|14|v|typescript
+	showSkuRule
+ffc3daeaa030b0ae0f4d3196149f0428|file:///home/wangfan/projects/hdj-follow-price/src/page/SupplierBlacklist/helper.ts|96|1|V|typescript
+	
+	/** 展示Sku规则详情 */
+	export const showSkuRule = async (e: React.MouseEvent) => {
+	  const target = e.target as HTMLButtonElement
+	  const id = Number(target.dataset.id)
+	  await pricePoolStore.skuRuleBySkuId.fetch({
+	    path: {
+	      skuId: id,
+	    },
+	  })
+	  pricePoolStore.skuRuleDetailModal.show()
+	}
+63ddb03c399fa4e920ebebd552688183|file:///home/wangfan/projects/hdj-follow-price/src/page/SupplierBlacklist/helper.ts|6|1|V|typescript
+	import { pricePool as pricePoolStore } from 'store/pricePool'
+109bf24ead9b5cc81caba0f7a72e66a0|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/List.tsx|7|31|v|typescriptreact
+	./SupplierBlacklist
+963a0c86fddeb96df6927edcb6281de3|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|27|13|v|typescriptreact
+	{
+	        row ? (
+	          <>
+	            规则类型: <b className={s.ruleType}>{row.ruleType}</b>
+	          </>
+	        ) : (
+	          '规则类型'
+	        )
+	      }
+7310afff20556d9639d047462ad504ef|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|6|1|V|typescriptreact
+	import s from './style.module.less'
+3371b8f67c56f2ee81486901dfea39a9|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|4|1|V|typescriptreact
+	// import { toJS } from 'mobx'
+52ee3fcd330fc902225511e77d9b0fa8|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|2|1|V|typescript
+	export const DETAIL_TABS = ['FOLLOW']
+6680dba00f3a88f66f8029a93d71d93c|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/type.ts|1|8|v|typescript
+	const
+1240dff09963a8a43a91849cdcce6777|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/type.ts|1|31|v|typescript
+	['FOLLOW']
+799ffe42ad80f8b3e2518486682029b8|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|10|1|V|typescriptreact
+	import { activeTab } from "./store";
+5e939d621ef733f020418d5b76cdbd00|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|11|10|v|typescriptreact
+	activeTab
+2f6f96b2a253f92a57a4f31094256b2d|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|34|1|V|typescriptreact
+	          <Tabs.TabPane key={DETAIL_TABS[0]}>
+	          </Tabs.TabPane>
+ac3cfde78daf42354edef062457f3d8f|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|39|1|V|typescriptreact
+	        <ShowSkuAndDepartmentAndCategory rule={rule!} />
+	        <RuleDetailItems isEbook={isEbook} item={row} />
+	        {children}
+31c955b61d39a41c2f97b866966c805e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|38|1|V|typescriptreact
+	            {children}
+e31fb4c2790dc4febcf9720f8b685c2c|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|35|24|v|typescriptreact
+	 tab="跟价规则"
+b341bccecd19698d87bb6556ee445873|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|36|1|V|typescriptreact
+	            <ShowSkuAndDepartmentAndCategory rule={rule!} />
+e54921cc712c3f7e7f363c1554d0f6b3|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|38|1|V|typescriptreact
+	          </Tabs.TabPane>
+f9f8e66dcaf1a8346c90888b52bb38aa|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|9|10|v|typescriptreact
+	RuleDetailItems
+fd604d5901995aef49b02cc1446a6078|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|14|26|V|typescriptreact
+	export interface IProps {
+	  // fetching: boolean
+	  children?: React.ReactNode
+	}
+6245f11d058f0562c192ed77f8896872|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|1|1|v|typescriptreact
+	{ children }
+07f08b7d673f96dc44e8b5fc13f4303f|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|1|1|v|typescriptreact
+	<IProps>
+813b0d2264271bcdf4efff2168802fc0|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|1|1|V|typescriptreact
+	import { restProperty } from "src/extendMobx/rest";
+	import { getApiPricingSkuPriceLimitId } from 'src/service/pricing'
+a0814ca088166c7227f65d4c498cd642|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|5|1|V|typescript
+	import { getApiPricingSkuPriceLimitId } from 'src/service/pricing'
+6ce661c6028518c7bed0698d39a0fb2f|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|6|15|v|typescript
+	getApiPricingSkuPriceLimitId 
+ff986575969d57018cd680dc37eb55b3|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|4|1|V|typescriptreact
+	export const limp
+3869222aa72cfc168f64ac7cb9841adf|file:///home/wangfan/projects/hdj-follow-price/src/service/pricing/request.ts|4300|8|v|typescript
+	DpSkuPriceLimitShowVO
+ae7f59ee69241918d06dca46e2cc7a07|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|1|8|v|typescriptreact
+	{ restProperty }
+b5b5168ae5dc38bb91fa87faf0d8e65e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|1|25|v|typescriptreact
+	src/extendMobx/rest
+a254c25adc7d10d7e9c4889484f875a5|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|3|24|v|typescriptreact
+	Detail
+46d4eff41e0a4c97d71668a04bdb4d68|file:///home/wangfan/projects/hdj-follow-price/src/page/FollowPriceRule/RuleDetailItems.tsx|6|1|V|typescriptreact
+	import { FormRow } from './FormRow'
+445f0096287836ebb085cbe5f757c632|file:///home/wangfan/projects/hdj-follow-price/src/page/FollowPriceRule/RuleDetailItems.tsx|29|1|V|typescriptreact
+	      <FormRow label={`跟价${opponentDisplayName}`}>
+a3738e7e4377605565938403abdfdb1d|file:///home/wangfan/projects/hdj-follow-price/src/page/FollowPriceRule/RuleDetailItems.tsx|29|1|V|typescriptreact
+	      <FormRow label={`跟价${opponentDisplayName}`}>
+	        <Form.Item label={`${opponentDisplayName}名称`}>
+	          {item.oppIds
+	            ?.map(id => recordOpponentMap(store.currentRuleOpponents)[id])
+	            .filter(Boolean)
+	            .join(', ')}
+	        </Form.Item>
+	      </FormRow>
+5a47f2cc7e6271a29fa7b005060565bd|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|9|1|v|typescriptreact
+	() => {
+	  return (
+	    <>
+	      <FormRow label={`跟价${opponentDisplayName}`}>
+	        <Form.Item label={`${opponentDisplayName}名称`}>
+	          {item.oppIds
+	            ?.map(id => recordOpponentMap(store.currentRuleOpponents)[id])
+	            .filter(Boolean)
+	            .join(', ')}
+	        </Form.Item>
+	      </FormRow>
+	    </>
+	  )
+	}
+e33a229f60e56b57e2edc32b0e074502|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|15|22|v|typescriptreact
+	{`跟价${opponentDisplayName}`}
+2fb0a733ddcc2aac4a31bc48146bb705|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|16|20|v|typescriptreact
+	label={`${opponentDisplayName}名称`}
+f46aab350730db7aa893b087e35b1363|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|17|1|V|typescriptreact
+	          {item.oppIds
+	            ?.map(id => recordOpponentMap(store.currentRuleOpponents)[id])
+	            .filter(Boolean)
+	            .join(', ')}
+24182c5ed8824f7df891870d01587294|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|5|10|v|typescript
+	getApiPricingSkuPriceLimitShowValidSkuId
+6ba8c5a315d43cbce4ae3882c87dfdf8|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|15|50|v|typescript
+	getApiPricingSkuPriceLimitId
+3e481fec1f42f86a8d88fd3e36e9adf4|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|6|30|v|typescript
+	ShowVO
+40c9ffa39b8bf40e93ddb11f3f4ee96e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|16|1|V|typescriptreact
+	      <FormRow label="供应商编码">
+	        <Form.Item>{rule.supplyCode}</Form.Item>
+	      </FormRow>
+ca0dbad92a874b2f69b549293387925e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|20|32|v|typescriptreact
+	Code
+8c3194e579e8bb29a6189f647f1b0102|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|19|1|V|typescriptreact
+	      <FormRow label="供应商名称">
+	        <Form.Item>{rule.supplyName}</Form.Item>
+	      </FormRow>
+9190cc22c9ba377113bc54ac51013a0b|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|22|23|v|typescriptreact
+	供应商名称
+4fc1065bd24960dce6421e81089bab36|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|23|26|v|typescriptreact
+	supplyName
+ecc4911806ca50cd7cea5bf321f90f4d|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|5|1|V|typescript
+	export const LIMIT_PRICE_TYPEs
+e16b9294edcc0743c5b8756eb167d4ab|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|10|1|V|typescript
+	  value: '2',
+0699bc227c6e3acd464765eb5cac805a|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|9|1|V|typescript
+	  title: '限定折扣',
+	  value: '2',
+f0fcdb7054c98706c0eca64498cc99c0|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|12|11|v|typescript
+	限定折扣
+e6ef6d311408dc9cd9bca2081b409a1e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|11|1|V|typescript
+	}, {
+	  title: '限定价格区间',
+	  value: '3',
+f9c5f2513b9345dc84a376d6a3419197|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|15|11|v|typescript
+	限定价格区间
+d5d3db1765287eef77d7927cc956f50a|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/constant.ts|17|5|v|typescript
+	title
+147803cb1595f5b9e5da7f5cc2b311ad|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|6|10|v|typescriptreact
+	LIMIT_PRICE_TYPE_MAP
+066782722d44740bb9ef10c1d2cb19c7|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/LimitPriceRuleItems.tsx|29|41|v|typescriptreact
+	rule.limitType
+af0903dbe259d4db7a5c79e9f181d8c6|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|29|78|v|typescriptreact
+	 as any
+0170715ff6362270b6a2007fc6f1b295|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|29|60|v|typescriptreact
+	activeTab.set(key as string)
+b45cffe084dd3d20d928bee85e7b0f21|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|32|34|v|typescriptreact
+	string
+285251ff399133a2cca56e9a15c8fad8|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|33|34|v|typescriptreact
+	DETAIL_TAB_TYPE
+eaa78705a29493f5b13848d84dd12340|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|8|21|V|typescriptreact
+	import {  } from "./s";
+f503dbeed040f34d8dd6f964d4f3d611|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|5|21|v|typescriptreact
+	limitPriceDetail
+d789e65e059bacf56a24b3e021a1fd53|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/helper.ts|84|9|v|typescript
+	pricePoolStore.skuRuleBySkuId
+f21244a78addd0fc85c04222825c484e|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/store.ts|18|29|v|typescript
+	() => {}
+25f7d02a47ed168a74a30901242f3cb8|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/helper.ts|85|21|v|typescript
+	target.dataset.id
+20a1185193cbb57b6472d45844e0abbe|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|33|54|v|typescriptreact
+	_TYPE
+c4aba287daa809c59a7276a720a42e9d|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|36|26|v|typescriptreact
+	activeRuleId.value
+d86dd62139a65ad9fa2a73903ac17713|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/RuleDetail.tsx|20|1|V|typescriptreact
+	    activeTab.restore()
+83c0d9a56c3875effcc2add32339183a|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/SkuRuleDetail.tsx|27|1|V|typescriptreact
+	        activeTab.restore()
+0cd9320f261b7831054957beddee6a8b|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/RuleDetail.tsx|19|8|V|typescriptreact
+	  React.useEffect(() => {
+	  }, [])
+cb0ac46b73c594f6b6bf7cc7c8e4c6e7|file:///home/wangfan/projects/hdj-follow-price/src/page/PricePool/RuleDetail.tsx|6|1|V|typescriptreact
+	import { activeTab } from './store'
+fffca4d67ea0a788813031b8bbc3b329|file:///home/wangfan/projects/hdj-price-health/package.json|29|6|v|json
 	commit
-0fe093ae7fbdfefbf0b2a597c9a220be|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|229|1|v|vim
-	colorscheme
-2c42f9abb1e74503b2d0b293b1585dbf|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|13|v|vim
-	vim-colorschemes
-ceabb23cf71bc5dfb5977e007f341c28|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|1|V|vim
-	Plug 'flazz/vim-colorschemes'
-558460c98b63579809a1305aaab8d691|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|130|1|V|vim
-	Plug 'xolox/vim-colorscheme-switcher'
-6db2a0462a09f7bf5425d8257e3adca2|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|131|17|v|vim
-	colorscheme-switcher
-fa301042fbc2459f0a3004252c6236c5|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|49|1|V|vim
-	nmap <silent> gr <Plug>(coc-references)
-0871a21babd9a2ca995fe0b2e512c089|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|50|21|v|vim
-	<Plug>(coc-references)
-47bde1179ab35477cac9c9db929660f8|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|129|1|V|vim
-	" many many colorschemes all in this
-edb8047aedfcefcee50cd48b61e019c4|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|131|3|v|vim
-	many many colorschemes all in this
-e467ce2a67c62ce31a9ad352c09a5c80|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|233|13|v|vim
-	gruvbox
-80b6771e556f68fa3d9a58c8a83e3399|file:///home/wangfan/projects/hdj-follow-price/src/component/Department/index.tsx|183|32|v|typescriptreact
-	selectedValue
-c7e58a288f46c32a5e64a4b69808a8a1|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|132|1|^v|vim
-	" 
-	" 
-70ebe5c0f8e708be1821d913743d0fb7|file:///mnt/sdb/nodes/superwf.github.io/p20210706.html|155|1|V|html
-	          </p>
-488adba2626cdb6cddedc92723626e0c|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|233|13|v|vim
-	kalahari
+69febd2c67b08341e30e5f7c3f8b83f1|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|283|1|V|vim
+	let g:coc_snippet_next = '<tab>'
+d0cab90d8d20d57e2f2b9be52f7dd25d|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|283|19|v|vim
+	next
+06d9467d516acd9efed751eacfd78022|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|283|1|V|vim
+	let g:coc_snippet_prev = '<c-k>'
+fcb08b164ac83e09964deb24f2d2e80b|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|283|19|v|vim
+	prev
+37bb4271cf1c012fcf9f82c70f196d52|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|37|1|v|vim
+	vmap <C-j> <Plug>(coc-snippets-select)
+5cc1858b13581fd57e8cb8704e08d3ce|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|37|1|V|vim
+	imap <C-l> <Plug>(coc-snippets-expand)
+67be68a348da3b850fb7daa10b034528|file:///home/wangfan/dotfiles/home/.config/nvim/init.vim|38|23|v|vim
+	snippets
