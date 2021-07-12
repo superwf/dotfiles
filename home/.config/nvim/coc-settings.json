@@ -14,11 +14,5 @@
   "tsserver.disableAutomaticTypeAcquisition": false,
   "typescript.format.enabled": false,
 
-  "suggest.triggerCompletionWait": 300,
-  "languageserver": {
-    "lua": {
-      "command": "lua-lsp",
-      "filetypes": ["lua"]
-    }
-  }
+  "suggest.triggerCompletionWait": 300
 }

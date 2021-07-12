@@ -201,3 +201,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [[ -s "/home/wangfan/.gvm/scripts/gvm" ]] && source "/home/wangfan/.gvm/scripts/gvm"
+
+alias luamake=/home/wangfan/lua-language-server/3rd/luamake/luamake
