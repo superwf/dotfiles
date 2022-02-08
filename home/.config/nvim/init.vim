@@ -57,6 +57,8 @@ nmap <silent> gr <Plug>(coc-references)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" add jsdoc comment surround
+nmap dc ^i/**<ESC>A*/<ESC>
 
 set hlsearch
 set shiftwidth=2
@@ -89,6 +91,7 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 " set the runtime path to include Vundle and initialize
 filetype off
 call plug#begin('~/.nvim/bundle')
+Plug 'github/copilot.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " syntax all in one
@@ -284,3 +287,5 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
+
+set runtimepath^=~/.nvim/bundle/coc-eslint
