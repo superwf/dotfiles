@@ -1,18 +1,24 @@
 {
   "eslint.autoFixOnSave": true,
-
   "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "json", "html"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "json",
+    "html",
+    "rust",
+    "markdown"
+  ],
   "stylelintplus.autoFixOnSave": true,
   "json.format.enable": true,
-
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   "wxss.validate": false,
-
   "tsserver.disableAutomaticTypeAcquisition": false,
   "typescript.format.enabled": false,
-
-  "suggest.triggerCompletionWait": 300
+  "suggest.triggerCompletionWait": 300,
+  "javascript.suggestionActions.enabled": false,
+  "Lua.workspace.checkThirdParty": false,
+  "Lua.workspace.library": "${3rd}/OpenResty/library",
+  "Lua.runtime.version": "LuaJIT"
 }
