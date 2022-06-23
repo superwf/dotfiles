@@ -66,3 +66,5 @@
 	followTags = true
 [pull]
 	ff = only
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+  path = ./.gitconfig-github
