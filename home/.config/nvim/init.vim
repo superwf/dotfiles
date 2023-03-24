@@ -34,8 +34,11 @@ noremap <F6> :cnext<ENTER>
 noremap <F7> "+y
 noremap <F8> :qa<ENTER>
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-imap <C-l> <Plug>(coc-snippets-expand)
-imap <C-o> <Plug>(coc-tsserver-expand)
+" imap <C-l> <Plug>(coc-snippets-expand)
+" imap <C-o> <Plug>(coc-tsserver-expand)
+
+imap <c-l> <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <c-o> <Cmd>call codeium#CycleCompletions(-1)<CR>
 
 " auto insert ',' to end of line
 nnoremap <c-j> <ESC>mzA,<ESC>`z
@@ -91,7 +94,9 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 " set the runtime path to include Vundle and initialize
 filetype off
 call plug#begin('~/.nvim/bundle')
-Plug 'github/copilot.vim'
+Plug 'Exafunction/codeium.vim'
+
+" Plug 'github/copilot.vim'
 Plug 'editorconfig/editorconfig-vim'
 
 " syntax all in one

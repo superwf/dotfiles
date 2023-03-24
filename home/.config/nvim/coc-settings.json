@@ -1,5 +1,6 @@
 {
   "eslint.autoFixOnSave": true,
+  // "eslint.probe": ["javascript","javascriptreact","typescript","typescriptreact","vue", "graphql"],
   "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
@@ -16,9 +17,21 @@
   "wxss.validate": false,
   "tsserver.disableAutomaticTypeAcquisition": false,
   "typescript.format.enabled": false,
-  "suggest.triggerCompletionWait": 300,
+  "suggest.triggerCompletionWait": 50,
   "javascript.suggestionActions.enabled": false,
   "Lua.workspace.checkThirdParty": false,
   "Lua.workspace.library": "${3rd}/OpenResty/library",
   "Lua.runtime.version": "LuaJIT"
+  // "languageserver": {
+  //   "graphql": {
+  //     "command": "graphql-lsp",
+  //     "args": ["server", "-m", "stream"],
+  //     // customize filetypes to your needs
+  //     "filetypes": ["graphql", "typescript", "typescriptreact"],
+  //     "trace.server":"verbose"
+  //     // "settings": {
+  //     //   "graphql-config.load.legacy": false
+  //     // }
+  //   }
+  // }
 }
