@@ -25,6 +25,7 @@ set clipboard+=unnamedplus
 " 	 	\ | wincmd p | diffthis
 
 set number
+noremap <F1> :w<ENTER>
 noremap <F2> :w<ENTER>
 noremap <F3> :FZF<ENTER>
 " noremap <F4> :ALELint<ENTER>

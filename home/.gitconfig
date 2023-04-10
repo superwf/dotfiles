@@ -14,6 +14,7 @@
   st = status
   ci = commit
   co = checkout
+  rpr = remote prune origin
   unstage = reset HEAD
   last = log -1 HEAD
   amend = commit --amend
