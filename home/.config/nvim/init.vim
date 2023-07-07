@@ -131,7 +131,7 @@ Plug 'terryma/vim-multiple-cursors'
 
 " for syntastic check
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+Plug 'jparise/vim-graphql'
 
 " markdown 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -227,7 +227,7 @@ call InitializeDirectories()
 " autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType vue setlocal commentstring=//\ %s
 
-set statusline=%{LinterStatus()}
+set statusline+=%{LinterStatus()}
 
 " fzf set
 set rtp+=~/.fzf
