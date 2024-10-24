@@ -18,7 +18,9 @@
     "coc-vetur": ">=1.2.5",
     "coc-yank": ">=1.2.0",
     "@yaegassy/coc-tailwindcss3": ">=0.5.4",
-    "coc-graphql": ">=0.0.1"
+    "coc-graphql": ">=0.0.1",
+    "coc-rust-analyzer": ">=0.75.1",
+    "coc-clangd": ">=0.31.0"
   },
   "disabled": [],
   "locked": [],
