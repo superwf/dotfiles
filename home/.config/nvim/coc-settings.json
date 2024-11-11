@@ -1,25 +1,23 @@
 {
   "eslint.autoFixOnSave": true,
+  "eslint.debug": true,
+  "eslint.experimental.useFlatConfig": true,
   // "eslint.probe": ["javascript","javascriptreact","typescript","typescriptreact","vue", "graphql"],
-  // "coc.preferences.colorSupport": true,
-  // "coc.preferences.formatOnSaveFiletypes": [
-  //   "css",
-  //   "json",
-  //   "html",
-  //   "rust",
-  //   "python",
-  //   "sql",
-  //   "markdown"
-  // ],
+  "colors.enable": false,
+  "highlight.colors.enable": false,
   "coc.preferences.formatOnSave": true,
   "stylelintplus.autoFixOnSave": true,
   "json.format.enable": true,
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
+  // "css.validate": false,
+  // "scss.validate": false,
+  // "less.validate": false,
+  // "wxss.validate": false,
   "tsserver.disableAutomaticTypeAcquisition": false,
+  "tsserver.useLocalTsdk": true,
+  "typescript.format.enable": false,
   "suggest.triggerCompletionWait": 50,
   "javascript.suggestionActions.enabled": false,
+  "workspace.workspaceFolderCheckCwd": true,
   "Lua.workspace.library": [
     "${3rd}/OpenResty/library"
   ],
@@ -31,25 +29,42 @@
     "--ignore=E402,F841,F401,E302,E305,W503"
   ],
   "python.formatting.provider": "black",
-  "graphql.filetypes": [
-    "graphql"
-  ],
-  "languageserver": {
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": [
-        "server",
-        "-m",
-        "stream"
-      ],
-      // customize filetypes to your needs
-      "filetypes": [
-        "graphql"
-      ],
-      "trace.server": "verbose"
-      // "settings": {
-      //   "graphql-config.load.legacy": false
-      // }
-    }
-  }
+  "[less][css]": {
+    "coc.preferences.formatOnSave": true
+  },
+  // "graphql.filetypes": [
+  //   "graphql"
+  // ],
+  // "languageserver": {
+  //   "graphql": {
+  //     "command": "graphql-lsp",
+  //     "args": [
+  //       "server",
+  //       "-m",
+  //       "stream"
+  //     ],
+  //     // customize filetypes to your needs
+  //     "filetypes": [
+  //       "graphql"
+  //     ],
+  //     "trace.server": "verbose"
+  //   }
+  // }
+  // "languageserver": {
+  //   "clangd": {
+  //     "command": "clangd",
+  //     "rootPatterns": [
+  //       "compile_flags.txt",
+  //       "compile_commands.json"
+  //     ],
+  //     "filetypes": [
+  //       "c",
+  //       "cc",
+  //       "cpp",
+  //       "c++",
+  //       "objc",
+  //       "objcpp"
+  //     ]
+  //   }
+  // }
 }
